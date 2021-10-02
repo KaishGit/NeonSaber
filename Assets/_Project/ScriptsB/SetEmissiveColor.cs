@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[ExecuteInEditMode]
 public class SetEmissiveColor : MonoBehaviour
 {
     [SerializeField][ColorUsage(true, true)]
@@ -10,13 +11,12 @@ public class SetEmissiveColor : MonoBehaviour
     private Material _material;
     private Color _currentColor;
 
-    void Start()
+    private void OnEnable()
     {
         _currentColor = _Color;
         _material = GetComponent<SpriteRenderer>().material;
         _material.SetColor("_ColorHdr", _currentColor);
     }
-
     
     void Update()
     {
