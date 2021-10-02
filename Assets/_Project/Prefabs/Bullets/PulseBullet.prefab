@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &741462915345418800
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_Name
+      value: PulseBullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 1843420022794961447, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: speed
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6086618807654377699, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 12d601d0ae339d94daff844d6e5b0416, type: 2}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
