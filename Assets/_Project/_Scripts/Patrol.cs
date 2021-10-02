@@ -3,95 +3,105 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patrol : MonoBehaviour
+public class Patrol : Enemy
 {
-
-    [Header("Configs")]
-    public float speed = 2f;
+    [Header("Patrol")]
+    [Range(0f, 20f)]
     public float walkDistance = 2f;
     public float changeDistance = 0.1f;
-    
     [Range(0, 360f)]
-    public float angle = 0f;
+    public float angleWalk = 0f;
 
     Vector3 startPosition;
     Vector3 destination;
 
-    bool isRight;
+    bool isReturnStart;
+
+    public float delayStop = 1f;
+    private float currentTimeStop = 0f;
+    private bool isStop = true;
 
     // Gizmos
-    Vector3 startPositionGizmos;
-    Vector3 point1, point2;
+    Vector3 point;
 
-    private void Start()
+    protected override void OnStart()
     {
         startPosition = transform.position;
         NextDestination();
     }
 
-    // Update is called once per frame
-    void Update()
+    protected override void OnUpdate()
     {
-        transform.position += (destination - transform.position).normalized * speed * Time.deltaTime;
+        if (isStop)
+        {
+            currentTimeStop += Time.deltaTime;
+            if (currentTimeStop >= delayStop)
+            {
+                currentTimeStop = 0f;
+                NextDestination();
+                isStop = false;
+            }
+            return;
+        }
+
+        dirWalk = (destination - transform.position).normalized;
+        transform.position += dirWalk * speed * Time.deltaTime;
 
         if (Vector3.Distance(transform.position, destination) <= changeDistance)
         {
-            NextDestination();
+            isStop = true;
         }
+    }
+
+    protected override void OnAnimation()
+    {
+        anim.SetBool("isStop", isStop);
+        base.OnAnimation();
     }
 
     private void NextDestination()
     {
-        if (isRight)
+        if (isReturnStart)
         {
-            destination = startPosition + Vector3.right * walkDistance;
-            var line = startPositionGizmos + destination;
-            var rotatedLine = Quaternion.AngleAxis(angle, transform.forward) * line;
-
-            destination = rotatedLine;
+            destination = startPosition;
         }
         else 
         {
-            destination = startPosition - Vector3.right * walkDistance;
-            var line = startPositionGizmos + destination;
-            var rotatedLine = Quaternion.AngleAxis(angle, transform.forward) * line;
+            destination = Vector3.zero - Vector3.right * walkDistance;
+            var line = Vector3.zero + destination;
+            var rotatedLine = Quaternion.AngleAxis(angleWalk, transform.forward) * line;
 
-            destination = rotatedLine;
+            destination = startPosition + rotatedLine;
         }
 
-        isRight = !isRight;
+        isReturnStart = !isReturnStart;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("DEATH");
+        if (collision.tag == "SABER") {
+            Debug.Log("DEATH");
+        }
     }
+
 
     void OnDrawGizmosSelected()
     {
-        // Draw a yellow sphere at the transform's position
         Gizmos.color = Color.red;
 
-        if (startPositionGizmos == Vector3.zero)
-            startPositionGizmos = transform.position;
+        if (!Application.isPlaying)
+            startPosition = transform.position;
 
-        point1 = startPosition + Vector3.right * walkDistance;
-        point2 = startPosition - Vector3.right * walkDistance;
+        point = Vector3.zero - Vector3.right * walkDistance;
 
-        var line = startPositionGizmos + point1;
-        var rotatedLine = Quaternion.AngleAxis(angle, transform.forward) * line;
+        var line = Vector3.zero + point;
+        var rotatedLine = Quaternion.AngleAxis(angleWalk, Vector3.forward) * line;
+        Gizmos.DrawLine(startPosition, startPosition + rotatedLine);
 
-        Gizmos.DrawLine(startPosition, rotatedLine);
+        Gizmos.DrawSphere(startPosition, 0.1f);
+        Gizmos.DrawSphere(startPosition + rotatedLine, 0.1f);
 
-        var line2 = startPositionGizmos + point2;
-        var rotatedLine2 = Quaternion.AngleAxis(angle, transform.forward) * line2;
-        Gizmos.DrawLine(startPosition, rotatedLine2);
-
-
-        Gizmos.DrawSphere(rotatedLine, 0.1f);
-        Gizmos.DrawSphere(rotatedLine2, 0.1f);
-
-        UnityEditor.Handles.Label(rotatedLine2 - Vector3.up * 0.25f, "PATH");
+        UnityEditor.Handles.Label(startPosition + rotatedLine - Vector3.up * 0.25f, "PATH");
 
     }
 }

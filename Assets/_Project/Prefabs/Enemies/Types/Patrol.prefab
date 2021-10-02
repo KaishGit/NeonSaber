@@ -12,9 +12,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 476316dd7183f034d82ac8550d7b13aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  path:
-  - {fileID: 0}
-  - {fileID: 0}
+  speed: 2
+  fireRate: 1
+  currentDelayFire: 0
+  bulletPrefab: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+  anim: {fileID: 3571208493071543705}
+  sprRenderer: {fileID: 4334640325743104180}
+  spriteIsRight: 0
+  walkDistance: 2
+  changeDistance: 0.1
+  angleWalk: 0
 --- !u!1001 &8808577941657567715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70,10 +77,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Patrol
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 890927019434513514, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
 --- !u!1 &4334640325743104181 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5051322027006693718, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+  m_PrefabInstance: {fileID: 8808577941657567715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &4334640325743104180 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 5051322027006693719, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+  m_PrefabInstance: {fileID: 8808577941657567715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &3571208493071543705 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5454177748424879226, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
   m_PrefabInstance: {fileID: 8808577941657567715}
   m_PrefabAsset: {fileID: 0}
