@@ -8,7 +8,7 @@ public class Tester : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            TrackManager.Instance.PlayStage01();
+            VfxManager.Instance.PlayBossDeath(transform.position);
         }
 
         if (Input.GetKeyDown(KeyCode.S))
@@ -19,6 +19,6 @@ public class Tester : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.D))
         {
             TrackManager.Instance.PlayCredits();
-        }
+        }       
     }
 }
