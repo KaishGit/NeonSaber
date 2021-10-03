@@ -6,9 +6,19 @@ public class Tester : MonoBehaviour
 {
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.A))
         {
-            SfxManager.Instance.PlayButtonClick();
+            TrackManager.Instance.PlayStage01();
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            TrackManager.Instance.PlayStage02();
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            TrackManager.Instance.PlayCredits();
         }
     }
 }
