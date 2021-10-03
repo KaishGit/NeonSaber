@@ -141,22 +141,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _AudioSource: {fileID: 2810992448049828907}
-  ShotAttack: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  ShotInHero: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  ShotInMonster: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  ShotInBoss: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  ShotInWall: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  ShotInShield: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  ShotInSaber: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  SaberPower: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  SaberInHero: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  SaberInMonster: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  SaberInBoss: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  SaberInWall: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  SaberInShield: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
+  ShotAttack: {fileID: 8300000, guid: 562883bad7784894297fa20ee7216c71, type: 3}
+  ShotInHero: {fileID: 8300000, guid: 1e6cdac20ce1a3b408b162741d8c95c3, type: 3}
+  ShotInMonster: {fileID: 8300000, guid: 59f49141b27ed98449d4417091d9234b, type: 3}
+  ShotInBoss: {fileID: 8300000, guid: 719876011fdd5284ca3da10d8ee71001, type: 3}
+  ShotInWall: {fileID: 8300000, guid: 7131d5c4802a6cd44a12f42915dabd4d, type: 3}
+  ShotInShield: {fileID: 8300000, guid: 0bd40945de9234b4bbc27ded5cd32783, type: 3}
+  ShotInSaber: {fileID: 8300000, guid: fe914393171e4304a90ccbe3c3b9069e, type: 3}
+  SaberPower: {fileID: 8300000, guid: a0a05d2b08a25a342adc26327ab0cae1, type: 3}
+  SaberInHero: {fileID: 8300000, guid: 5d0acac5a9e6ea941967cd54b7adc127, type: 3}
+  SaberInMonster: {fileID: 8300000, guid: 0d884b4349561fc47a6f03cfb3109700, type: 3}
+  SaberInBoss: {fileID: 8300000, guid: 3721ec4d4f081234c8b5d9526fe130c5, type: 3}
+  SaberInWall: {fileID: 8300000, guid: b5d975607c5f0234387299191f6c6f44, type: 3}
+  SaberInShield: {fileID: 8300000, guid: 9b39488eb116a584a8aa3627f3bf8679, type: 3}
   SaberInSaber: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  DeathHero: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  DeathMonster: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  DeathBoss: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  ShieldActive: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
-  ButtonClick: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
+  DeathHero: {fileID: 8300000, guid: 806bb97dc8ee2fe4abf6b1cef4ca17cc, type: 3}
+  DeathMonster: {fileID: 8300000, guid: 5b78d049810b9c24c82a58874ed59685, type: 3}
+  DeathBoss: {fileID: 8300000, guid: e9642693a276dee4d83ebe798a1de1cb, type: 3}
+  ShieldActive: {fileID: 8300000, guid: 7a190bc42c0d30f4e8d0799379ca4728, type: 3}
+  ButtonClick: {fileID: 8300000, guid: a418deb3c998daf428294cb7d93c6567, type: 3}
