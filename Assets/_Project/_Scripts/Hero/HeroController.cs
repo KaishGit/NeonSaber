@@ -80,7 +80,7 @@ public class HeroController : MonoBehaviour
     {
         if (!isDefending)
         {
-            Vector2 inputMovement =  obj.ReadValue<Vector2>();
+            Vector2 inputMovement = obj.ReadValue<Vector2>();
             axisY = inputMovement.y;
             axisX = inputMovement.x;
             direction.x = axisX;
