@@ -96,8 +96,14 @@ public class SfxManager : MonoBehaviour
 		_AudioSource.PlayOneShot(SaberInSaber);
 	}
 
-	public void PlayDeathHero()
+	public void PlayDeathHero(float waitTime)
 	{
+		StartCoroutine(WaitPlayDeathHero(waitTime));
+	}
+
+	private IEnumerator WaitPlayDeathHero(float time)
+	{
+		yield return new WaitForSeconds(time);
 		_AudioSource.PlayOneShot(DeathHero);
 	}
 

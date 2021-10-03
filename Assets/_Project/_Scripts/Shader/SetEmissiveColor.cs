@@ -14,6 +14,10 @@ public class SetEmissiveColor : MonoBehaviour
     private void OnEnable()
     {
         _currentColor = _Color;
+
+        //try{_material = GetComponent<SpriteRenderer>().material;}
+        //catch (System.Exception) { }
+
         _material = GetComponent<SpriteRenderer>().material;
         _material.SetColor("_ColorHdr", _currentColor);
     }
