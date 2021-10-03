@@ -94,6 +94,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Boss4
       objectReference: {fileID: 0}
+    - target: {fileID: 5051322027006693718, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693719, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_Sprite
       value: 

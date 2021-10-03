@@ -170,4 +170,19 @@ public class HeroController : MonoBehaviour
         }
 
     }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        if (other.CompareTag("Sabre"))
+        {
+            isDead = true;
+            transform.localScale = Vector3.zero;
+
+            VfxManager.Instance.PlayHeroDeath(transform.position);
+            SfxManager.Instance.PlaySaberInHero();
+            SfxManager.Instance.PlayDeathHero(0.2f);
+
+            Debug.Log("Morri");
+        }
+    }
 }
