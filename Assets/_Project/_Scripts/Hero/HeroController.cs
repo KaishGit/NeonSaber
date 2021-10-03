@@ -1,9 +1,13 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class HeroController : MonoBehaviour
 {
+    PlayerControls controls;
+
     public float Speed;
     public Rigidbody2D MyRigidBody;
     public Animator MyAnimator;
@@ -18,6 +22,27 @@ public class HeroController : MonoBehaviour
     private Vector3 newScale;
     private float maxDefenseTime;
 
+    private void Awake()
+    {
+        controls = new PlayerControls();
+
+        controls.Gameplay.Movement.performed += GetMovement;
+        controls.Gameplay.Movement.canceled += GetMovement;
+
+        controls.Gameplay.Defense.performed += GetDefense;
+    }
+
+    private void OnEnable()
+    {
+        controls.Gameplay.Enable();
+    }
+
+
+    private void OnDisable()
+    {
+        controls.Gameplay.Disable();
+    }
+
     void Start()
     {
         
@@ -27,13 +52,21 @@ public class HeroController : MonoBehaviour
     {
         if (isDead) return;
 
-        GetMovement();
-
-        GetDefense();
+        DefenseTimer();
 
         SetAnimation();
 
         CheckFlip();
+    }
+
+    private void DefenseTimer()
+    {
+        if (isDefending && Time.time >= maxDefenseTime)
+        {
+            isDefending = false;
+            ShieldCollider.enabled = false;
+            MyAnimator.Play("Hero_Idle");
+        }
     }
 
     private void FixedUpdate()
@@ -43,12 +76,13 @@ public class HeroController : MonoBehaviour
         MyRigidBody.MovePosition(transform.position + Vector3.ClampMagnitude(direction, 1) * Speed * Time.fixedDeltaTime);
     }
 
-    private void GetMovement()
+    private void GetMovement(InputAction.CallbackContext obj)
     {
         if (!isDefending)
         {
-            axisY = Input.GetAxis("Vertical");
-            axisX = Input.GetAxis("Horizontal");
+            Vector2 inputMovement =  obj.ReadValue<Vector2>();
+            axisY = inputMovement.y;
+            axisX = inputMovement.x;
             direction.x = axisX;
             direction.y = axisY;
         }
@@ -59,9 +93,9 @@ public class HeroController : MonoBehaviour
         }
     }
 
-    private void GetDefense()
+    private void GetDefense(InputAction.CallbackContext obj)
     {
-        if (!isDefending && Input.GetKeyDown(KeyCode.Space))
+        if (!isDefending)
         {
             isDefending = true;
             maxDefenseTime = Time.time + DefenseTime;
@@ -70,12 +104,6 @@ public class HeroController : MonoBehaviour
             SfxManager.Instance.PlayShieldActive();
         }
 
-        if(isDefending && Time.time >= maxDefenseTime)
-        {
-            isDefending = false;
-            ShieldCollider.enabled = false;
-            MyAnimator.Play("Hero_Idle");
-        }
     }
 
     private void SetAnimation()
