@@ -12,7 +12,6 @@ public class Patrol : Enemy
     [Range(0, 360f)]
     public float angleWalk = 0f;
 
-    Vector3 startPosition;
     Vector3 destination;
 
     bool isReturnStart;
@@ -21,12 +20,8 @@ public class Patrol : Enemy
     private float currentTimeStop = 0f;
     private bool isStop = true;
 
-    // Gizmos
-    Vector3 point;
-
     protected override void OnStart()
     {
-        startPosition = transform.position;
         NextDestination();
     }
 
@@ -61,18 +56,10 @@ public class Patrol : Enemy
 
     private void NextDestination()
     {
-        if (isReturnStart)
-        {
-            destination = startPosition;
-        }
-        else 
-        {
-            destination = Vector3.zero - Vector3.right * walkDistance;
-            var line = Vector3.zero + destination;
-            var rotatedLine = Quaternion.AngleAxis(angleWalk, transform.forward) * line;
 
-            destination = startPosition + rotatedLine;
-        }
+        Vector3 areaScale = ReferenceManager.instance.areaTransform.localScale;
+        destination = new Vector3(UnityEngine.Random.Range(-(areaScale.x/2), areaScale.x/2),
+                                  UnityEngine.Random.Range(-(areaScale.y/2), areaScale.y/2));
 
         isReturnStart = !isReturnStart;
     }
@@ -82,26 +69,5 @@ public class Patrol : Enemy
         if (collision.tag == "SABER") {
             Debug.Log("DEATH");
         }
-    }
-
-
-    void OnDrawGizmosSelected()
-    {
-        Gizmos.color = Color.red;
-
-        if (!Application.isPlaying)
-            startPosition = transform.position;
-
-        point = Vector3.zero - Vector3.right * walkDistance;
-
-        var line = Vector3.zero + point;
-        var rotatedLine = Quaternion.AngleAxis(angleWalk, Vector3.forward) * line;
-        Gizmos.DrawLine(startPosition, startPosition + rotatedLine);
-
-        Gizmos.DrawSphere(startPosition, 0.1f);
-        Gizmos.DrawSphere(startPosition + rotatedLine, 0.1f);
-
-        UnityEditor.Handles.Label(startPosition + rotatedLine - Vector3.up * 0.25f, "PATH");
-
     }
 }

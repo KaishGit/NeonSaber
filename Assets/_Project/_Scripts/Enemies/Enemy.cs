@@ -85,7 +85,7 @@ public abstract class  Enemy : MonoBehaviour
 
     protected virtual void OnAnimation() 
     {
-        if (dirWalk.x > 0)
+        if ((ReferenceManager.instance.playerTransform.position - transform.position).x > 0)
         {
             if (spriteIsRight)
             {
@@ -97,7 +97,7 @@ public abstract class  Enemy : MonoBehaviour
             }
 
         }
-        else if (dirWalk.x < 0)
+        else if ((ReferenceManager.instance.playerTransform.position - transform.position).x < 0)
         {
             if (spriteIsRight)
             {
