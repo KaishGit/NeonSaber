@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: a1cb95ad5a94cd843b7fdf818ce6bf39
+guid: 55fe0f84d79c20d4a9828d6b97d0584c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7563738882130684195
-    second: Boss_01_Black_0
+      213: -808112923674609043
+    second: Boss2_0
   - first:
-      213: -6392871616941294959
-    second: Boss_01_Black_1
+      213: 6642691135006647050
+    second: Boss2_1
   - first:
-      213: -5560178201734732056
-    second: Boss_01_Black_2
+      213: -1374223935073179459
+    second: Boss2_2
   - first:
-      213: 9008120518826496414
-    second: Boss_01_Black_3
+      213: 963400842054379146
+    second: Boss2_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,7 +115,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_01_Black_0
+      name: Boss2_0
       rect:
         serializedVersion: 2
         x: 0
@@ -129,14 +129,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd65ac4af83380790800000000000000
-      internalID: -7563738882130684195
+      spriteID: d6af8f5d39109c4f0800000000000000
+      internalID: -808112923674609043
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_01_Black_1
+      name: Boss2_1
       rect:
         serializedVersion: 2
         x: 160
@@ -150,14 +150,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19a7981a225f747a0800000000000000
-      internalID: -6392871616941294959
+      spriteID: a0325be84649f2c50800000000000000
+      internalID: 6642691135006647050
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_01_Black_2
+      name: Boss2_2
       rect:
         serializedVersion: 2
         x: 320
@@ -171,14 +171,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e62bb5726746d2b0800000000000000
-      internalID: -5560178201734732056
+      spriteID: db8af1cac96cdece0800000000000000
+      internalID: -1374223935073179459
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_01_Black_3
+      name: Boss2_3
       rect:
         serializedVersion: 2
         x: 480
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e919f8282e5430d70800000000000000
-      internalID: 9008120518826496414
+      spriteID: a86a6f626ffae5d00800000000000000
+      internalID: 963400842054379146
       vertices: []
       indices: 
       edges: []

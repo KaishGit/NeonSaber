@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -26,6 +27,7 @@ public abstract class  Enemy : MonoBehaviour
     public SpriteRenderer sprRenderer;
     public bool spriteIsRight;
 
+    public int life = 1;
 
     protected Vector3 dirWalk;
 
@@ -57,6 +59,28 @@ public abstract class  Enemy : MonoBehaviour
         }
         OnUpdate();
         OnAnimation();
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Sabre" || collision.tag == "Bullet")
+        {
+            OnTakeDamage();
+        }
+    }
+
+    protected virtual void OnTakeDamage() 
+    {
+        life--;
+        if (life <= 0)
+        {
+            Death();
+        }
+    }
+
+    private void Death()
+    {
+        Debug.Log("Death");
     }
 
     protected virtual void OnAnimation() 

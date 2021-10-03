@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: a1cb95ad5a94cd843b7fdf818ce6bf39
+guid: 768589e395dd8f245936117350d9b839
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7563738882130684195
-    second: Boss_01_Black_0
+      213: -2951843035778274856
+    second: Enemy4_0
   - first:
-      213: -6392871616941294959
-    second: Boss_01_Black_1
+      213: 3176876685942713322
+    second: Enemy4_1
   - first:
-      213: -5560178201734732056
-    second: Boss_01_Black_2
+      213: 4591543920735405122
+    second: Enemy4_2
   - first:
-      213: 9008120518826496414
-    second: Boss_01_Black_3
+      213: 8783408278132954868
+    second: Enemy4_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -115,13 +115,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boss_01_Black_0
+      name: Enemy4_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 160
-        height: 160
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -129,20 +129,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd65ac4af83380790800000000000000
-      internalID: -7563738882130684195
+      spriteID: 8d9a9b30662f807d0800000000000000
+      internalID: -2951843035778274856
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_01_Black_1
+      name: Enemy4_1
       rect:
         serializedVersion: 2
-        x: 160
+        x: 60
         y: 0
-        width: 160
-        height: 160
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,20 +150,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 19a7981a225f747a0800000000000000
-      internalID: -6392871616941294959
+      spriteID: aebe5d89388861c20800000000000000
+      internalID: 3176876685942713322
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_01_Black_2
+      name: Enemy4_2
       rect:
         serializedVersion: 2
-        x: 320
+        x: 120
         y: 0
-        width: 160
-        height: 160
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -171,20 +171,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e62bb5726746d2b0800000000000000
-      internalID: -5560178201734732056
+      spriteID: 244c90e6ed078bf30800000000000000
+      internalID: 4591543920735405122
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Boss_01_Black_3
+      name: Enemy4_3
       rect:
         serializedVersion: 2
-        x: 480
+        x: 180
         y: 0
-        width: 160
-        height: 160
+        width: 60
+        height: 60
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -192,8 +192,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e919f8282e5430d70800000000000000
-      internalID: 9008120518826496414
+      spriteID: 4f6175fda4fe4e970800000000000000
+      internalID: 8783408278132954868
       vertices: []
       indices: 
       edges: []
