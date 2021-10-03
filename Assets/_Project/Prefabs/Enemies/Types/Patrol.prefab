@@ -13,15 +13,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  fireRate: 1
-  currentDelayFire: 0
   bulletPrefab: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+  bulletPivots: {fileID: 5452435039677760735}
+  fireRate: 1
+  fireSequence: 1
+  fireRateSequence: 0
   anim: {fileID: 3571208493071543705}
   sprRenderer: {fileID: 4334640325743104180}
   spriteIsRight: 0
+  life: 1
   walkDistance: 2
   changeDistance: 0.1
   angleWalk: 0
+  delayStop: 1
 --- !u!1001 &8808577941657567715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -93,5 +97,10 @@ SpriteRenderer:
 --- !u!95 &3571208493071543705 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5454177748424879226, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+  m_PrefabInstance: {fileID: 8808577941657567715}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &5452435039677760735 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3572667527818741052, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
   m_PrefabInstance: {fileID: 8808577941657567715}
   m_PrefabAsset: {fileID: 0}

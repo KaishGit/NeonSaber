@@ -10,6 +10,7 @@ public abstract class  Enemy : MonoBehaviour
 
     [Header("Bullet")]
     public GameObject bulletPrefab;
+    public Transform bulletPivots;
 
     [Header("Fire")]
     public float fireRate = 1f;
@@ -31,12 +32,17 @@ public abstract class  Enemy : MonoBehaviour
 
     protected Vector3 dirWalk;
 
+
+    private bool isDead;
+
+
     private void Start()
     {
         OnStart();
     }
     void Update()
     {
+
         currentDelayFire += Time.deltaTime;
         if (currentDelayFire >= fireRate)
         {
@@ -46,7 +52,32 @@ public abstract class  Enemy : MonoBehaviour
                 currentDelaySequence = 0f;
 
                 currentFire++;
-                Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
+                Vector3 result = ReferenceManager.instance.playerTransform.position - transform.position ;
+
+                var positionTarget1 = ReferenceManager.instance.playerTransform.position + (Vector3.up * 0.5f) + (Vector3.right * 0.5f);
+                var positionTarget2 = ReferenceManager.instance.playerTransform.position + (Vector3.down * 0.5f) + (Vector3.left * 0.5f);
+                if ((result.x > 0 && result.y > 0) || (result.x < 0 && result.y < 0))
+                {
+                    positionTarget1 = positionTarget1 + Vector3.left;
+                    positionTarget2 = positionTarget2 + Vector3.right;
+                }
+
+                if (bulletPivots.childCount == 1)
+                {
+                    foreach (Transform bulletPivot in bulletPivots)
+                    {
+                        GameObject obj = Instantiate(bulletPrefab, bulletPivot.position, Quaternion.identity, transform.parent);
+                        obj.GetComponent<Bullet>().dir = (bulletPivot.position - transform.position).normalized;
+                    }
+                } 
+                else
+                {
+                    GameObject obj = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
+                    obj.GetComponent<Bullet>().dir = (positionTarget1 - transform.position).normalized;
+
+                    GameObject obj1 = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
+                    obj1.GetComponent<Bullet>().dir = (positionTarget2 - transform.position).normalized;
+                }
 
                 if (currentFire >= fireSequence)
                 {
@@ -63,50 +94,63 @@ public abstract class  Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Sabre" || collision.tag == "Bullet")
+        if (collision.tag == "Sabre" || collision.tag == "SabreBullet")
         {
-            OnTakeDamage();
+            if (!isDead)
+            {
+                OnTakeDamage(collision.tag);
+            }
         }
     }
 
-    protected virtual void OnTakeDamage() 
+    protected virtual void OnTakeDamage(string tag) 
     {
         life--;
         if (life <= 0)
         {
-            Death();
+            isDead = true;
+            OnDeath();
         }
     }
 
-    private void Death()
+    protected virtual void OnDeath()
     {
+
         Debug.Log("Death");
     }
 
     protected virtual void OnAnimation() 
     {
+
+        Vector3 scaleChange = Vector3.one;
+
         if ((ReferenceManager.instance.playerTransform.position - transform.position).x > 0)
         {
+
+
             if (spriteIsRight)
             {
-                sprRenderer.flipX = false;
+                scaleChange.x = 1;
             }
             else
             {
-                sprRenderer.flipX = true;
+                scaleChange.x = -1;
             }
 
+            transform.localScale = scaleChange;
         }
         else if ((ReferenceManager.instance.playerTransform.position - transform.position).x < 0)
         {
             if (spriteIsRight)
             {
-                sprRenderer.flipX = true;
+                scaleChange.x = -1;
             }
             else
             {
-                sprRenderer.flipX = false;
+                scaleChange.x = 1;
             }
+
+            transform.localScale = scaleChange;
         }
     }
 

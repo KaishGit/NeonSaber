@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Area
+  - Bullet
+  - Sabre
+  - SabreBullet
   layers:
   - Default
   - TransparentFX

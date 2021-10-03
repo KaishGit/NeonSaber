@@ -48,6 +48,37 @@ public class Patrol : Enemy
         }
     }
 
+    protected override void OnTakeDamage(string tag)
+    {
+
+        if (tag == "Sabre")
+        {
+            SfxManager.Instance.PlaySaberInMonster();
+        }
+        else
+        {
+            SfxManager.Instance.PlayShotInMonster();
+        }
+
+        base.OnTakeDamage(tag);
+    }
+
+    protected override void OnDeath()
+    {
+        VfxManager.Instance.PlayMonsterDeath(transform.position);
+        StartCoroutine(DeathCoroutine());
+
+        base.OnDeath();
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        sprRenderer.enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        SfxManager.Instance.PlayDeathMonster();
+        Destroy(gameObject);
+    }
+
     protected override void OnAnimation()
     {
         anim.SetBool("isStop", isStop);
@@ -64,10 +95,4 @@ public class Patrol : Enemy
         isReturnStart = !isReturnStart;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag == "SABER") {
-            Debug.Log("DEATH");
-        }
-    }
 }

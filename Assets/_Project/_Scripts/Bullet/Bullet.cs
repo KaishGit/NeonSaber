@@ -10,15 +10,7 @@ public class Bullet : MonoBehaviour
 
     public float speed = 5f; 
 
-    private Vector3 dir;
-
-    private void Start()
-    {
-        player = GameObject.FindGameObjectWithTag("Player").transform;
-        dir = (player.position - transform.position).normalized;
-    }
-
-
+    public Vector3 dir;
 
     void Update()
     {
