@@ -11,6 +11,7 @@ public abstract class  Enemy : MonoBehaviour
     [Header("Bullet")]
     public GameObject bulletPrefab;
     public Transform bulletPivots;
+    public float speedBullet = 1.5f;
 
     [Header("Fire")]
     public float fireRate = 1f;
@@ -67,16 +68,23 @@ public abstract class  Enemy : MonoBehaviour
                     foreach (Transform bulletPivot in bulletPivots)
                     {
                         GameObject obj = Instantiate(bulletPrefab, bulletPivot.position, Quaternion.identity, transform.parent);
-                        obj.GetComponent<Bullet>().dir = (bulletPivot.position - transform.position).normalized;
+                        Bullet b = obj.GetComponent<Bullet>();
+                        b.dir = (ReferenceManager.instance.playerTransform.position - transform.position).normalized;
+                        b.speed = speedBullet;
                     }
                 } 
                 else
                 {
                     GameObject obj = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
-                    obj.GetComponent<Bullet>().dir = (positionTarget1 - transform.position).normalized;
+                    Bullet b = obj.GetComponent<Bullet>();
+                    b.dir = (positionTarget1 - transform.position).normalized;
+                    b.speed = speedBullet;
 
                     GameObject obj1 = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
-                    obj1.GetComponent<Bullet>().dir = (positionTarget2 - transform.position).normalized;
+                    b = obj1.GetComponent<Bullet>();
+                    b.dir = (positionTarget2 - transform.position).normalized;
+                    b.speed = speedBullet;
+
                 }
 
                 if (currentFire >= fireSequence)

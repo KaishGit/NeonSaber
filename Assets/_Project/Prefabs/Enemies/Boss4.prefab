@@ -1,29 +1,29 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &595326063534258157
+--- !u!114 &3322938162105817886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4430281803512635529}
+  m_GameObject: {fileID: 2204615511337033073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a850fca24c7f1ac419b6218a64f014c7, type: 3}
+  m_Script: {fileID: 11500000, guid: 689de3445fe856f46b521d1833a46df5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  bulletPrefab: {fileID: 2893255450974602511, guid: ce2cc8cd38d49a245836fdd31fb0aa3c, type: 3}
-  bulletPivots: {fileID: 5401726342471218403}
+  bulletPrefab: {fileID: 9465087174581500, guid: 5cc87d35bc79688429f61eb047115cd0, type: 3}
+  bulletPivots: {fileID: 7571978750836721947}
   speedBullet: 5
-  fireRate: 1
+  fireRate: 0.75
   fireSequence: 1
   fireRateSequence: 0
-  anim: {fileID: 3518228915793173925}
-  sprRenderer: {fileID: 4430281803512635528}
+  anim: {fileID: 1382773850418978909}
+  sprRenderer: {fileID: 2204615511337033072}
   spriteIsRight: 0
-  life: 4
---- !u!1001 &8890777797701169631
+  life: 6
+--- !u!1001 &6377581675032366119
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -92,35 +92,39 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693718, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_Name
-      value: Boss2
+      value: Boss4
       objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693719, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -808112923674609043, guid: 55fe0f84d79c20d4a9828d6b97d0584c, type: 3}
+      objectReference: {fileID: -3727960535020349654, guid: 1a8fa8c111ac86440b086e54ba1c2e5b, type: 3}
     - target: {fileID: 5454177748424879226, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 53952084d1bc12843bc54cd493f112d1, type: 2}
+      objectReference: {fileID: 9100000, guid: 5568faed26dcfc841a092bf2cd91578c, type: 2}
+    - target: {fileID: 8275328022537684280, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.19
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
---- !u!1 &4430281803512635529 stripped
+--- !u!1 &2204615511337033073 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5051322027006693718, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
-  m_PrefabInstance: {fileID: 8890777797701169631}
+  m_PrefabInstance: {fileID: 6377581675032366119}
   m_PrefabAsset: {fileID: 0}
---- !u!212 &4430281803512635528 stripped
+--- !u!212 &2204615511337033072 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 5051322027006693719, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
-  m_PrefabInstance: {fileID: 8890777797701169631}
+  m_PrefabInstance: {fileID: 6377581675032366119}
   m_PrefabAsset: {fileID: 0}
---- !u!95 &3518228915793173925 stripped
+--- !u!95 &1382773850418978909 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5454177748424879226, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
-  m_PrefabInstance: {fileID: 8890777797701169631}
+  m_PrefabInstance: {fileID: 6377581675032366119}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &5401726342471218403 stripped
+--- !u!4 &7571978750836721947 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3572667527818741052, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
-  m_PrefabInstance: {fileID: 8890777797701169631}
+  m_PrefabInstance: {fileID: 6377581675032366119}
   m_PrefabAsset: {fileID: 0}

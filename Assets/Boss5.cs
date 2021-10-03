@@ -1,17 +1,18 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss2 : Enemy
+public class Boss5 : Enemy
 {
     protected override void OnUpdate()
     {
         switch (life)
         {
-            case 4:
+            case 6:
+            case 5:
                 Phase1();
                 break;
+            case 4:
             case 3:
                 Phase2();
                 break;
@@ -26,17 +27,17 @@ public class Boss2 : Enemy
 
     private void Phase3()
     {
-        //throw new NotImplementedException();
+
     }
 
     private void Phase2()
     {
-        //throw new NotImplementedException();
+
     }
 
     private void Phase1()
     {
-        //throw new NotImplementedException();
+
     }
 
     protected override void OnTakeDamage(string tag)

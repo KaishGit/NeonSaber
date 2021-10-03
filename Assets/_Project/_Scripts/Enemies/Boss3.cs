@@ -1,18 +1,73 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss3 : MonoBehaviour
+public class Boss3 : Enemy
 {
-    // Start is called before the first frame update
-    void Start()
+    protected override void OnUpdate()
     {
-        
+        switch (life)
+        {
+            case 5:
+                Phase1();
+                break;
+            case 4:
+            case 3:
+                Phase2();
+                break;
+            case 2:
+            case 1:
+                Phase3();
+                break;
+        }
+
+        //Movement();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Phase3()
     {
-        
+
+    }
+
+    private void Phase2()
+    {
+
+    }
+
+    private void Phase1()
+    {
+
+    }
+
+    protected override void OnTakeDamage(string tag)
+    {
+
+        if (tag == "Sabre")
+        {
+            SfxManager.Instance.PlaySaberInBoss();
+        }
+        else
+        {
+            SfxManager.Instance.PlayShotInBoss();
+        }
+
+        base.OnTakeDamage(tag);
+    }
+
+    protected override void OnDeath()
+    {
+        VfxManager.Instance.PlayBossDeath(transform.position);
+        StartCoroutine(DeathCoroutine());
+
+        base.OnDeath();
+    }
+
+    IEnumerator DeathCoroutine()
+    {
+        sprRenderer.enabled = false;
+        yield return new WaitForSeconds(0.5f);
+        SfxManager.Instance.PlayDeathBoss();
+        Destroy(gameObject);
     }
 }
