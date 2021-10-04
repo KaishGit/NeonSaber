@@ -1184,7 +1184,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2f1ae02225d6d1f41a4db499b2e49515, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1569,6 +1569,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5775203835775718400, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169767477367741965, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8169767477367741965, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -2378,8 +2386,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[1].text
-      value: P-vo p-c-de p-ve p-en p-fren p-tar po p-your p-ma worse pi p-ni p-mi
-        p-go p-pa p-ra p-es p-ta p-be p-les p-cer po p-its p-qui p-li p-brium.
+      value: "P-you p-must p-face p-your p-big p-gest p-en p\u2013e p\u2013my p-to
+        p-es p\u2013tab p\u2013lish p-your p-bal p-ance."
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[2].text
@@ -2409,6 +2417,10 @@ PrefabInstance:
         say. Even more so for a Redi.
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[1].delayTime
+      value: 0.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[5].delayTime
       value: 0.05
       objectReference: {fileID: 0}
@@ -2419,6 +2431,10 @@ PrefabInstance:
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[7].delayTime
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[0].delayToNext
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[0].eraseToNext

@@ -1112,7 +1112,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 01d7046d22c91ec459b9d456dd75f020, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2390,6 +2390,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[0].delayToNext
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[0].eraseToNext
       value: 1
       objectReference: {fileID: 0}
@@ -2402,8 +2406,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[3].delayToNext
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[3].eraseToNext
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[4].delayToNext
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[4].eraseToNext

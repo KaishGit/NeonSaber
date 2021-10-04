@@ -725,7 +725,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 645f699ffc4dd5a41820984ed06720ba, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2361,7 +2361,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.size
-      value: 8
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[0].text
@@ -2389,13 +2389,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[6].text
-      value: How does he stay alive in open space? This is a game. We can do what
-        we want!!
+      value: 'How does he stay alive in open space? '
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[7].text
-      value: Is he safe? No. Unfortunately space is not as quiet a place as they
-        say. Even more so for a Redi.
+      value: 'This is a game. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[8].text
+      value: We can do what we want!!
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[9].text
+      value: 'Is he safe? '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[10].text
+      value: No.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[11].text
+      value: 'Unfortunately space is not as quiet a place as they say. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[12].text
+      value: Even more so for a Redi.
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[5].delayTime
@@ -2407,6 +2425,26 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[7].delayTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[8].delayTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[9].delayTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[10].delayTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[11].delayTime
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[12].delayTime
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
@@ -2422,6 +2460,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[3].delayToNext
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[3].eraseToNext
       value: 1
       objectReference: {fileID: 0}
@@ -2431,7 +2473,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[5].delayToNext
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[5].eraseToNext
@@ -2451,6 +2493,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[7].eraseToNext
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[8].delayToNext
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[8].eraseToNext
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[9].delayToNext
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[9].eraseToNext
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[10].delayToNext
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[10].eraseToNext
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[11].delayToNext
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[11].eraseToNext
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[12].delayToNext
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[12].eraseToNext
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697853, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}

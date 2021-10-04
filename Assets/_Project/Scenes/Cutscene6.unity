@@ -504,11 +504,18 @@ PlayableDirector:
     value: {fileID: 726842438}
   - key: {fileID: 1612295004995063387, guid: d4b61bb5945c05c48ba98b07adb5e4a1, type: 2}
     value: {fileID: 1806724902}
+  - key: {fileID: -2787146173683448065, guid: d4b61bb5945c05c48ba98b07adb5e4a1, type: 2}
+    value: {fileID: 1473162477}
+  - key: {fileID: -5176650524027379233, guid: d4b61bb5945c05c48ba98b07adb5e4a1, type: 2}
+    value: {fileID: 1925422464}
+  - key: {fileID: 9148911502266331197, guid: d4b61bb5945c05c48ba98b07adb5e4a1, type: 2}
+    value: {fileID: 2056503781}
   m_ExposedReferences:
     m_References:
     - 0866bed7a77286143b6863d3d037a63e: {fileID: 726842437}
     - 1e89f2d1f125f8f4a8f759f3c3dd5a4e: {fileID: 0}
     - 1f4a10fa892f72d4c8e8a4415169586b: {fileID: 0}
+    - 27a4e6c83b21fe644b6484a08ba2959e: {fileID: 1473162477}
     - 967b9b97240cf4146b398c2ece9fcea0: {fileID: 0}
 --- !u!4 &637031155
 Transform:
@@ -1081,7 +1088,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: b85e9027a24d91e4081029a047ebc1d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1224,7 +1231,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: cdb86c593c6d0804e80982d3db0d271b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1244,7 +1251,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -7942615331907957816, guid: 3905938f977b6f240ac6cae633f1aa3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1388,7 +1395,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1925422465
 Transform:
   m_ObjectHideFlags: 0
@@ -1422,7 +1429,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: cdb86c593c6d0804e80982d3db0d271b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1442,7 +1449,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -6256655238335667195, guid: 3905938f977b6f240ac6cae633f1aa3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1695,7 +1702,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2056503782
 Transform:
   m_ObjectHideFlags: 0
@@ -1729,7 +1736,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: cdb86c593c6d0804e80982d3db0d271b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1749,7 +1756,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 7012061180758930968, guid: 3905938f977b6f240ac6cae633f1aa3f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -2692,6 +2699,10 @@ PrefabInstance:
       propertyPath: sentences.Array.data[7].text
       value: Is he safe? No. Unfortunately space is not as quiet a place as they
         say. Even more so for a Redi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: sentences.Array.data[0].delayTime
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[5].delayTime
