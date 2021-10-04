@@ -6,6 +6,9 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     static public LevelManager Instance;
+    public float RestartDelay, LoadDelay;
+
+    private WaitForSeconds restartWait, loadWait;
 
     private void Awake()
     {
@@ -18,6 +21,9 @@ public class LevelManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        restartWait = new WaitForSeconds(RestartDelay);
+        loadWait = new WaitForSeconds(LoadDelay);
     }
 
     public void NextLevel()
@@ -47,11 +53,23 @@ public class LevelManager : MonoBehaviour
 
     public void LoadLevel(int index)
     {
+        StartCoroutine(WaitForLoad(index));
+    }
+
+    IEnumerator WaitForLoad(int index)
+    {
+        yield return loadWait;
         SceneManager.LoadScene(index);
     }
 
     public void RestartLevel()
     {
+        StartCoroutine(WaitForRestart());
+    }
+
+    IEnumerator WaitForRestart()
+    {
+        yield return restartWait;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

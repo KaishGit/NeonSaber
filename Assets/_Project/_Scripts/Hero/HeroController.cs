@@ -166,6 +166,8 @@ public class HeroController : MonoBehaviour
 
         VfxManager.Instance.PlayHeroDeath(transform.position);
         SfxManager.Instance.PlayDeathHero(0.2f);
+
+        GameManager.Instance.SetGameOver();
     }
 
     private void OnTriggerEnter(Collider other)

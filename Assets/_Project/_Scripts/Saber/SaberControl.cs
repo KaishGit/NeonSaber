@@ -25,14 +25,6 @@ public class SaberControl : MonoBehaviour
         _RigidBody.velocity = _RigidBody.velocity.normalized * _SaberSpeed;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Boss"))
-        {
-            SaberEffectManager.Instance.SetSaberByBoss(this);
-        }      
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
@@ -43,7 +35,7 @@ public class SaberControl : MonoBehaviour
         {
             SfxManager.Instance.PlaySaberInShield();
         }
-        else if (collision.gameObject.CompareTag("Saber"))
+        else if (collision.gameObject.CompareTag("Sabre"))
         {
             SfxManager.Instance.PlaySaberInSaber();
         }

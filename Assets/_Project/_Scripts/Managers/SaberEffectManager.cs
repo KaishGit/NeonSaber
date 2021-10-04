@@ -6,83 +6,85 @@ public class SaberEffectManager : MonoBehaviour
 {
     static public SaberEffectManager Instance;
 
-	public float DelayTime, DelayTimeRange;
-	public int SkillAmount;
-	public List<SaberControl> SaberList;
+    public float DelayTime, DelayTimeRange;
+    public int SkillAmount;
+    public List<SaberControl> SaberList;
+    public bool dontChange;
 
-	private SaberControl currentSaber, tempSaber;
-	private float nextDrawnTime;
-	private bool neutralSaber = true;
+    private SaberControl currentSaber, tempSaber;
+    private float nextDrawnTime;
+    private bool neutralSaber = true;
 
-	private void Awake()
-	{
-		if (Instance == null)
-		{
-			Instance = this;
-			DontDestroyOnLoad(gameObject);
-		}
-		else
-		{
-			Destroy(gameObject);
-		}	
-	}
+    private void Awake()
+    {
+        Instance = this;
+    }
 
-	private void Start()
-	{
-		currentSaber = SaberList[0];
-		nextDrawnTime = Time.time + DelayTime + Random.Range(-DelayTimeRange, DelayTimeRange);
-	}
+    private void Start()
+    {
+        currentSaber = SaberList[0];
+        nextDrawnTime = Time.time + DelayTime + Random.Range(-DelayTimeRange, DelayTimeRange);
+    }
 
-	private void Update()
-	{
-		if (SkillAmount == 0) return;
+    private void Update()
+    {
+        if (dontChange && currentSaber == SaberList[0]) return;
 
-		if (Time.time >= nextDrawnTime)
-		{
-			neutralSaber = !neutralSaber;
+        if (Time.time >= nextDrawnTime)
+        {
+            neutralSaber = !neutralSaber;
 
-			if (neutralSaber)
-			{
-				tempSaber = SaberList[0];
+            if (neutralSaber)
+            {
+                Debug.Log("neutro");
+                tempSaber = SaberList[0];
 
-				nextDrawnTime = Time.time + DelayTime + Random.Range(-DelayTimeRange, DelayTimeRange);
-			}
-			else
-			{
-				tempSaber = SaberList[Random.Range(1, SkillAmount + 1)];
+                nextDrawnTime = Time.time + DelayTime + Random.Range(-DelayTimeRange, DelayTimeRange);
+            }
+            else
+            {
+                tempSaber = SaberList[Random.Range(1, SkillAmount + 1)];
 
-				nextDrawnTime = Time.time + tempSaber.duration;
-			}
+                nextDrawnTime = Time.time + tempSaber.duration;
+            }
 
-			tempSaber.gameObject.SetActive(true);
+            tempSaber.gameObject.SetActive(true);
 
-			tempSaber._RigidBody.velocity = currentSaber._RigidBody.velocity;
-			tempSaber.gameObject.transform.position = currentSaber.gameObject.transform.position;
-			tempSaber.gameObject.transform.rotation = currentSaber.gameObject.transform.rotation;
+            tempSaber._RigidBody.velocity = currentSaber._RigidBody.velocity;
+            tempSaber.gameObject.transform.position = currentSaber.gameObject.transform.position;
+            tempSaber.gameObject.transform.rotation = currentSaber.gameObject.transform.rotation;
 
-			currentSaber.gameObject.SetActive(false);
-			currentSaber = tempSaber;
+            currentSaber.gameObject.SetActive(false);
+            currentSaber = tempSaber;
 
-			VfxManager.Instance.PlaySaberPower(currentSaber.transform.position);
-			SfxManager.Instance.PlaySaberPower();
-		}
-	}
+            VfxManager.Instance.PlaySaberPower(currentSaber.transform.position);
+            SfxManager.Instance.PlaySaberPower();
+        }
+    }
 
-	public void SetSaberByBoss(SaberControl saber)
-	{
-		neutralSaber = false;
-		tempSaber = saber;
-		nextDrawnTime = Time.time + tempSaber.duration;
+    public void SetSaberByBoss(SaberControl saber)
+    {
+        Debug.Log("Bateu");
 
-		tempSaber.gameObject.SetActive(true);
+        neutralSaber = false;
 
-		tempSaber._RigidBody.velocity = currentSaber._RigidBody.velocity;
-		tempSaber.gameObject.transform.position = currentSaber.gameObject.transform.position;
-		tempSaber.gameObject.transform.rotation = currentSaber.gameObject.transform.rotation;
+        if(saber != currentSaber)
+        {
+            tempSaber = saber;
 
-		currentSaber.gameObject.SetActive(false);
-		currentSaber = tempSaber;
-		VfxManager.Instance.PlaySaberPower(currentSaber.transform.position);
-		SfxManager.Instance.PlaySaberPower();
-	}
+            tempSaber.gameObject.SetActive(true);
+            Debug.Log(tempSaber.gameObject.name);
+
+            tempSaber._RigidBody.velocity = currentSaber._RigidBody.velocity;
+            tempSaber.gameObject.transform.position = currentSaber.gameObject.transform.position;
+            tempSaber.gameObject.transform.rotation = currentSaber.gameObject.transform.rotation;
+
+            currentSaber.gameObject.SetActive(false);
+            currentSaber = tempSaber;
+        }
+
+        nextDrawnTime = Time.time + tempSaber.duration;
+        VfxManager.Instance.PlaySaberPower(currentSaber.transform.position);
+        SfxManager.Instance.PlaySaberPower();
+    }
 }

@@ -48,7 +48,11 @@ public class Boss4 : Enemy
         if (tag == "Sabre")
         {
             SfxManager.Instance.PlaySaberInBoss();
-            SaberEffectManager.Instance.SetSaberByBoss(Saber);
+
+            if (!isInvencible)
+            {
+                SaberEffectManager.Instance.SetSaberByBoss(Saber);
+            }
         }
         else
         {

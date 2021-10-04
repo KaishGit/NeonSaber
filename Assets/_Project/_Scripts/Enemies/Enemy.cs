@@ -30,6 +30,7 @@ public abstract class Enemy : MonoBehaviour
     public bool spriteIsRight;
 
     public int life = 1;
+    public float invencibleTime = 1.5f;
 
     protected Vector3 dirWalk;
 
@@ -37,7 +38,8 @@ public abstract class Enemy : MonoBehaviour
     private bool isDead;
 
     protected bool canFire = true;
-
+    protected bool isInvencible;
+    private float invencibleTimeLimit;
 
     private void Start()
     {
@@ -104,10 +106,17 @@ public abstract class Enemy : MonoBehaviour
         }
         OnUpdate();
         OnAnimation();
+
+        if (Time.time >= invencibleTimeLimit)
+        {
+            isInvencible = false;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (isInvencible) return;
+
         if (collision.tag == "Sabre" || collision.tag == "SabreBullet")
         {
             if (!isDead)
@@ -122,15 +131,20 @@ public abstract class Enemy : MonoBehaviour
         life--;
         if (life <= 0)
         {
+            Debug.Log("Hit:" + tag);
             isDead = true;
             OnDeath();
+        }
+        else
+        {
+            isInvencible = true;
+            invencibleTimeLimit = Time.time + invencibleTime;
         }
     }
 
     protected virtual void OnDeath()
     {
-
-        Debug.Log("Death");
+        GameManager.Instance.RemoveEnemy(gameObject);
     }
 
     protected virtual void OnAnimation()

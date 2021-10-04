@@ -104,11 +104,14 @@ public class Boss1 : Enemy
 
     protected override void OnTakeDamage(string tag)
     {
-
         if (tag == "Sabre")
         {
             SfxManager.Instance.PlaySaberInBoss();
-            SaberEffectManager.Instance.SetSaberByBoss(Saber);
+
+            if (!isInvencible)
+            {
+                SaberEffectManager.Instance.SetSaberByBoss(Saber);
+            }          
         }
         else
         {
