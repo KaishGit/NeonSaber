@@ -40,11 +40,13 @@ public abstract class  Enemy : MonoBehaviour
     private void Start()
     {
         OnStart();
+
+        currentDelayFire += Time.deltaTime + UnityEngine.Random.Range(-1.1f, 1.1f);
     }
     void Update()
     {
 
-        currentDelayFire += Time.deltaTime;
+        currentDelayFire += Time.deltaTime + UnityEngine.Random.Range(-0.5f,0.5f);
         if (currentDelayFire >= fireRate)
         {
             currentDelaySequence += Time.deltaTime;

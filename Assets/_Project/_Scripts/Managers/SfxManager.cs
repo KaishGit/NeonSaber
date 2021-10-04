@@ -12,6 +12,7 @@ public class SfxManager : MonoBehaviour
     public AudioClip SaberPower, SaberInHero, SaberInMonster, SaberInBoss, SaberInWall, SaberInShield, SaberInSaber;
     public AudioClip DeathHero, DeathMonster, DeathBoss;
     public AudioClip ShieldActive, ButtonClick;
+	public AudioClip[] ShotAttackList;
 
     private void Awake()
     {
@@ -28,7 +29,7 @@ public class SfxManager : MonoBehaviour
 
     public void PlayShotAttack()
     {
-        _AudioSource.PlayOneShot(ShotAttack);
+        _AudioSource.PlayOneShot(ShotAttackList[Random.Range(0,ShotAttackList.Length)]);
     }
 
 	public void PlayShotInHero()

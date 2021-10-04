@@ -15,8 +15,8 @@ MonoBehaviour:
   speed: 2
   bulletPrefab: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
   bulletPivots: {fileID: 5040611585953192814}
-  speedBullet: 5
-  fireRate: 1
+  speedBullet: 10
+  fireRate: 3.5
   fireSequence: 1
   fireRateSequence: 0
   anim: {fileID: 4599954728178463272}
@@ -27,6 +27,7 @@ MonoBehaviour:
   Speed: 1
   Radius: 0.1
   changeTimer: 2
+  Saber: {fileID: 0}
 --- !u!1001 &8387800064696835666
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -60,11 +61,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693712, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.230318
       objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693712, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 3.455378
       objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693712, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -110,10 +111,22 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -7563738882130684195, guid: a1cb95ad5a94cd843b7fdf818ce6bf39, type: 3}
+    - target: {fileID: 5051322027006693719, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e66730e186b291f42828eab943e777c2, type: 2}
     - target: {fileID: 5454177748424879226, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 713a82e906211c14aaa53558bcf268e8, type: 2}
+    - target: {fileID: 8275328022537684280, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.985
+      objectReference: {fileID: 0}
+    - target: {fileID: 8275328022537684280, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.064
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
 --- !u!1 &3638509553338273540 stripped

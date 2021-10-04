@@ -61,7 +61,10 @@ public class SaberEffectManager : MonoBehaviour
 			tempSaber.gameObject.transform.rotation = currentSaber.gameObject.transform.rotation;
 
 			currentSaber.gameObject.SetActive(false);
-			currentSaber = tempSaber;	
+			currentSaber = tempSaber;
+
+			VfxManager.Instance.PlaySaberPower(currentSaber.transform.position);
+			SfxManager.Instance.PlaySaberPower();
 		}
 	}
 
@@ -79,5 +82,7 @@ public class SaberEffectManager : MonoBehaviour
 
 		currentSaber.gameObject.SetActive(false);
 		currentSaber = tempSaber;
+		VfxManager.Instance.PlaySaberPower(currentSaber.transform.position);
+		SfxManager.Instance.PlaySaberPower();
 	}
 }

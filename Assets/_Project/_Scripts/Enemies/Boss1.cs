@@ -20,6 +20,8 @@ public class Boss1 : Enemy
     public float changeTimer = 2f;
     private float currentTimer = 0f;
 
+    public SaberControl Saber;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +108,7 @@ public class Boss1 : Enemy
         if (tag == "Sabre")
         {
             SfxManager.Instance.PlaySaberInBoss();
+            SaberEffectManager.Instance.SetSaberByBoss(Saber);
         }
         else
         {

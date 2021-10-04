@@ -28,7 +28,6 @@ public class HeroController : MonoBehaviour
 
         controls.Gameplay.Movement.performed += GetMovement;
         controls.Gameplay.Movement.canceled += GetMovement;
-
         controls.Gameplay.Defense.performed += GetDefense;
     }
 
@@ -41,11 +40,6 @@ public class HeroController : MonoBehaviour
     private void OnDisable()
     {
         controls.Gameplay.Disable();
-    }
-
-    void Start()
-    {
-        
     }
 
     void Update()
@@ -66,6 +60,8 @@ public class HeroController : MonoBehaviour
             isDefending = false;
             ShieldCollider.enabled = false;
             MyAnimator.Play("Hero_Idle");
+
+            gameObject.tag = "Player";
         }
     }
 
@@ -86,11 +82,6 @@ public class HeroController : MonoBehaviour
             direction.x = axisX;
             direction.y = axisY;
         }
-        else
-        {
-            direction = Vector3.zero;
-            isWalking = false;
-        }
     }
 
     private void GetDefense(InputAction.CallbackContext obj)
@@ -102,8 +93,12 @@ public class HeroController : MonoBehaviour
             ShieldCollider.enabled = true;
 
             SfxManager.Instance.PlayShieldActive();
-        }
 
+            gameObject.tag = "Shield";
+
+            direction = Vector3.zero;
+            isWalking = false;
+        }
     }
 
     private void SetAnimation()
@@ -148,41 +143,43 @@ public class HeroController : MonoBehaviour
         transform.localScale = newScale;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void TakeDamage(string tag)
     {
         if (isDefending) return;
+
+        if (tag == "Sabre")
+        {
+            SfxManager.Instance.PlaySaberInHero();
+            PlayerDeath();
+        }
+        else if (tag == "Bullet" || tag == "SabreBullet")
+        {
+            SfxManager.Instance.PlayShotInHero();
+            PlayerDeath();
+        }
+    }
+
+    private void PlayerDeath()
+    {
+        isDead = true;
+        transform.localScale = Vector3.zero;
+
+        VfxManager.Instance.PlayHeroDeath(transform.position);
+        SfxManager.Instance.PlayDeathHero(0.2f);
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        TakeDamage(other.tag);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (isDefending) return;
-
-        if (collision.gameObject.CompareTag("Sabre"))
-        {
-            isDead = true;
-            transform.localScale = Vector3.zero;
-
-            VfxManager.Instance.PlayHeroDeath(transform.position);
-            SfxManager.Instance.PlaySaberInHero();
-            SfxManager.Instance.PlayDeathHero(0.2f);
-
-            Debug.Log("Morri");
-        }
-
+        TakeDamage(collision.gameObject.tag);
     }
 
     private void OnParticleCollision(GameObject other)
     {
-        if (other.CompareTag("Sabre"))
-        {
-            isDead = true;
-            transform.localScale = Vector3.zero;
-
-            VfxManager.Instance.PlayHeroDeath(transform.position);
-            SfxManager.Instance.PlaySaberInHero();
-            SfxManager.Instance.PlayDeathHero(0.2f);
-
-            Debug.Log("Morri");
-        }
+        TakeDamage(other.tag);
     }
 }

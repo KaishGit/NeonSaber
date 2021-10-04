@@ -160,3 +160,7 @@ MonoBehaviour:
   DeathBoss: {fileID: 8300000, guid: e9642693a276dee4d83ebe798a1de1cb, type: 3}
   ShieldActive: {fileID: 8300000, guid: 7a190bc42c0d30f4e8d0799379ca4728, type: 3}
   ButtonClick: {fileID: 8300000, guid: a418deb3c998daf428294cb7d93c6567, type: 3}
+  ShotAttackList:
+  - {fileID: 8300000, guid: 562883bad7784894297fa20ee7216c71, type: 3}
+  - {fileID: 8300000, guid: 8962d2786f1c9d148b86aa608f9aea7c, type: 3}
+  - {fileID: 8300000, guid: a7a8ff6428d030e4292b6c8a86d20c5f, type: 3}

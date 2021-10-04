@@ -6,18 +6,18 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     public Rigidbody2D rb2D;
-    private Transform player;
-
-    public float speed = 5f; 
+    public float speed = 5f;
+    public SpriteRenderer _SpriteRenderer; 
+    public Material PlayerBullet;
+    public int hp = 1;
 
     [HideInInspector]
     public Vector3 dir;
 
-    private int hp = 1;
-
     private void Start()
     {
         rb2D.velocity = dir;
+        SfxManager.Instance.PlayShotAttack();
     }
 
     void Update()
@@ -41,6 +41,30 @@ public class Bullet : MonoBehaviour
             {
                 Destroy(gameObject);
             }
+        }
+        else if (collision.gameObject.CompareTag("Player"))
+        {
+            Destroy(gameObject);
+        }
+        else if (collision.gameObject.CompareTag("Sabre"))
+        {
+            SfxManager.Instance.PlayShotInSaber();
+            _SpriteRenderer.material = PlayerBullet;
+            gameObject.tag = "SabreBullet";
+        }
+        else if (collision.gameObject.CompareTag("Shield"))
+        {
+            SfxManager.Instance.PlayShotInShield();
+            _SpriteRenderer.material = PlayerBullet;
+            gameObject.tag = "SabreBullet";
+        }
+        else if (collision.gameObject.CompareTag("Monster") 
+            || collision.gameObject.CompareTag("Boss"))
+        {
+            if(gameObject.tag == "SabreBullet")
+            {
+                Destroy(gameObject);
+            }          
         }
     }
 }
