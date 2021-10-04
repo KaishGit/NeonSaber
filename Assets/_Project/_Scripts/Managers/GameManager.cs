@@ -44,8 +44,8 @@ public class GameManager : MonoBehaviour
     private void GameWin()
     {
         isFinish = true;
-        Destroy(GameObject.FindGameObjectWithTag("Player").GetComponent<HeroController>());
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().Play("Hero_Idle");
+        Destroy(ReferenceManager.instance.playerTransform.gameObject.GetComponent<HeroController>());
+        ReferenceManager.instance.playerTransform.gameObject.GetComponent<Animator>().Play("Hero_Idle");
         LevelManager.Instance.NextLevel();
         Debug.Log("GameWin");
     }
