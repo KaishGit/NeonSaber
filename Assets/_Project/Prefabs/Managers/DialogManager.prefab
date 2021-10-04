@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Hook Skycatcher \xE9 um Redi."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 17ce5c5544aa46240a7b3dac31d74366, type: 2}
+  m_sharedMaterial: {fileID: 3746998255810579087, guid: 17ce5c5544aa46240a7b3dac31d74366, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -252,16 +252,21 @@ MonoBehaviour:
   - text: Hook Skycatcher is a Redi.
     delayTime: 0.05
     delayToNext: 2
+    eraseToNext: 0
   - text: There aren't many in the Universe.
     delayTime: 0.05
     delayToNext: 2
+    eraseToNext: 0
   - text: This question is raising doubts in your mind and making your power shaky.
     delayTime: 0.05
     delayToNext: 2
+    eraseToNext: 0
   - text: Your inseparable neon saber (the Redis' deadly weapon) is no longer obeying
       you.
     delayTime: 0.05
     delayToNext: 4
+    eraseToNext: 0
   - text: It's a bad time for that, as your planet is being attacked right now...
     delayTime: 0.05
     delayToNext: 2
+    eraseToNext: 0
