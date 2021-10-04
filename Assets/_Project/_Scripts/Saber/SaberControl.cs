@@ -6,19 +6,30 @@ public class SaberControl : MonoBehaviour
 {
     public Rigidbody2D _RigidBody;
     public float _SaberSpeed;
+    public float duration;
 
-    private Vector3 direction;
-    private float currentSpeed;
+    [HideInInspector]
+    public Vector3 direction;
 
     void Start()
     {
-        currentSpeed = _SaberSpeed;
-        direction = new Vector3(currentSpeed, currentSpeed);
-        _RigidBody.velocity = direction;
+        if(_RigidBody.velocity == Vector2.zero)
+        {
+            direction = new Vector3(_SaberSpeed, _SaberSpeed);
+            _RigidBody.velocity = direction;
+        }     
     }
 
     void Update()
     {
-        _RigidBody.velocity = _RigidBody.velocity.normalized * currentSpeed;
+        _RigidBody.velocity = _RigidBody.velocity.normalized * _SaberSpeed;
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Boss"))
+        {
+            SaberEffectManager.Instance.SetSaberByBoss(this);
+        }
     }
 }

@@ -8,17 +8,17 @@ public class Tester : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.A))
         {
-            VfxManager.Instance.PlayBossDeath(transform.position);
+            LevelManager.Instance.NextLevel();
         }
 
         if (Input.GetKeyDown(KeyCode.S))
         {
-            TrackManager.Instance.PlayStage02();
+            LevelManager.Instance.PrevLevel();
         }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            TrackManager.Instance.PlayCredits();
-        }       
+            LevelManager.Instance.RestartLevel();
+        }
     }
 }

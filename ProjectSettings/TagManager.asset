@@ -8,6 +8,8 @@ TagManager:
   - Bullet
   - Sabre
   - SabreBullet
+  - Boss
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "274648328199",
+    "firebase_url": "https://neonsaber-bc145-default-rtdb.firebaseio.com",
+    "project_id": "neonsaber-bc145",
+    "storage_bucket": "neonsaber-bc145.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274648328199:android:6a5835d901ac7a160c62a2",
+        "android_client_info": {
+          "package_name": "com.company.NeonSaber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "274648328199-f6nb27hufprtj8ubaesh89h1rttp30v5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9DSAgo7EqTta2mD3Mp2tGBdxsT3GbBmg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "274648328199-f6nb27hufprtj8ubaesh89h1rttp30v5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "274648328199-4lcvm1rlve0dhc19prqsqc20ddg9rcdg.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.company.NeonSaber"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

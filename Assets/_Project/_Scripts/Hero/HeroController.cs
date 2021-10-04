@@ -80,7 +80,7 @@ public class HeroController : MonoBehaviour
     {
         if (!isDefending)
         {
-            Vector2 inputMovement =  obj.ReadValue<Vector2>();
+            Vector2 inputMovement = obj.ReadValue<Vector2>();
             axisY = inputMovement.y;
             axisX = inputMovement.x;
             direction.x = axisX;
@@ -169,5 +169,20 @@ public class HeroController : MonoBehaviour
             Debug.Log("Morri");
         }
 
+    }
+
+    private void OnParticleCollision(GameObject other)
+    {
+        if (other.CompareTag("Sabre"))
+        {
+            isDead = true;
+            transform.localScale = Vector3.zero;
+
+            VfxManager.Instance.PlayHeroDeath(transform.position);
+            SfxManager.Instance.PlaySaberInHero();
+            SfxManager.Instance.PlayDeathHero(0.2f);
+
+            Debug.Log("Morri");
+        }
     }
 }
