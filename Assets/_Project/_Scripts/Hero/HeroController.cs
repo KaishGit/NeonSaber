@@ -22,6 +22,8 @@ public class HeroController : MonoBehaviour
     private Vector3 newScale;
     private float maxDefenseTime;
 
+    private Vector3 inputMovement;
+
     private void Awake()
     {
         controls = new PlayerControls();
@@ -46,6 +48,16 @@ public class HeroController : MonoBehaviour
     {
         if (isDead) return;
 
+        if (!isDefending)
+        {
+            direction.x = this.inputMovement.x;
+            direction.y = this.inputMovement.y;
+        }
+        else
+        {
+            direction = Vector3.zero;
+        }
+
         DefenseTimer();
 
         SetAnimation();
@@ -69,19 +81,19 @@ public class HeroController : MonoBehaviour
     {
         if (isDead) return;
 
+
         MyRigidBody.MovePosition(transform.position + Vector3.ClampMagnitude(direction, 1) * Speed * Time.fixedDeltaTime);
+
+
     }
 
     private void GetMovement(InputAction.CallbackContext obj)
     {
-        if (!isDefending)
-        {
-            Vector2 inputMovement = obj.ReadValue<Vector2>();
-            axisY = inputMovement.y;
-            axisX = inputMovement.x;
-            direction.x = axisX;
-            direction.y = axisY;
-        }
+        Vector3 inputMovement = obj.ReadValue<Vector2>();
+        axisY = inputMovement.y;
+        axisX = inputMovement.x;
+        this.inputMovement.x = axisX;
+        this.inputMovement.y = axisY;
     }
 
     private void GetDefense(InputAction.CallbackContext obj)
@@ -96,7 +108,6 @@ public class HeroController : MonoBehaviour
 
             gameObject.tag = "Shield";
 
-            direction = Vector3.zero;
             isWalking = false;
         }
     }
