@@ -7,7 +7,7 @@ public class TrackManager : MonoBehaviour
     static public TrackManager Instance;
 
     public AudioSource _AudioSource;
-    public AudioClip Stage01, Stage02, Stage03, Stage04, Stage05, Menu, Credits;
+    public AudioClip Stage01, Menu, Credits;
 
     private float currentTime;
     private bool isStageTrack;
@@ -19,7 +19,7 @@ public class TrackManager : MonoBehaviour
             Instance = this;
             DontDestroyOnLoad(gameObject);
 
-            _AudioSource.clip = Menu;
+            _AudioSource.clip = Stage01;
             _AudioSource.Play();
         }
         else
@@ -47,29 +47,9 @@ public class TrackManager : MonoBehaviour
         _AudioSource.Play();
     }
 
-    public void PlayStage01()
+    public void PlayGamePlay()
     {
         PlayStage(Stage01);
-    }
-
-    public void PlayStage02()
-    {
-        PlayStage(Stage02);
-    }
-
-    public void PlayStage03()
-    {
-        PlayStage(Stage03);
-    }
-
-    public void PlayStage04()
-    {
-        PlayStage(Stage04);
-    }
-
-    public void PlayStage05()
-    {
-        PlayStage(Stage05);
     }
 
     public void PlayMenu()

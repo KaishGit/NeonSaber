@@ -36,7 +36,6 @@ public class SaberEffectManager : MonoBehaviour
 
             if (neutralSaber)
             {
-                Debug.Log("neutro");
                 tempSaber = SaberList[0];
 
                 nextDrawnTime = Time.time + DelayTime + Random.Range(-DelayTimeRange, DelayTimeRange);

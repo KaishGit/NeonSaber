@@ -7,7 +7,6 @@ public class Boss5 : Patrol
     private bool isDefending;
     public float DefenseTime;
     public Collider2D ShieldCollider;
-    public SaberControl Saber;
 
     private float maxDefenseTime;
     private float nextDefense;
@@ -76,16 +75,10 @@ public class Boss5 : Patrol
     }
 
     protected override void OnTakeDamage(string tag)
-    {
-
+    {  
         if (tag == "Sabre")
         {
             SfxManager.Instance.PlaySaberInBoss();
-
-            if (!isInvencible)
-            {
-                SaberEffectManager.Instance.SetSaberByBoss(Saber);
-            }
         }
         else
         {

@@ -131,7 +131,6 @@ public abstract class Enemy : MonoBehaviour
         life--;
         if (life <= 0)
         {
-            Debug.Log("Hit:" + tag);
             isDead = true;
             OnDeath();
         }
@@ -140,6 +139,7 @@ public abstract class Enemy : MonoBehaviour
             isInvencible = true;
             invencibleTimeLimit = Time.time + invencibleTime;
         }
+
     }
 
     protected virtual void OnDeath()

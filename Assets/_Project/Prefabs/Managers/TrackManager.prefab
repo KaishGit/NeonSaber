@@ -141,10 +141,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _AudioSource: {fileID: 6310914620312554348}
-  Stage01: {fileID: 8300000, guid: 7f2b1b932b1b3d349a42b9e787adacf8, type: 3}
+  Stage01: {fileID: 8300000, guid: 6cfbe1abfdec02e48b2dde4e3adb06e3, type: 3}
   Stage02: {fileID: 8300000, guid: 7f2b1b932b1b3d349a42b9e787adacf8, type: 3}
   Stage03: {fileID: 8300000, guid: 7f2b1b932b1b3d349a42b9e787adacf8, type: 3}
   Stage04: {fileID: 8300000, guid: 7f2b1b932b1b3d349a42b9e787adacf8, type: 3}
   Stage05: {fileID: 8300000, guid: 7f2b1b932b1b3d349a42b9e787adacf8, type: 3}
-  Menu: {fileID: 8300000, guid: 30b16a00d91749b43955006e036aa385, type: 3}
-  Credits: {fileID: 8300000, guid: 30b16a00d91749b43955006e036aa385, type: 3}
+  Menu: {fileID: 8300000, guid: 4945eb8eabbd09145ad87476e3c4f7c8, type: 3}
+  Credits: {fileID: 8300000, guid: d9017e8c268234a43b113dba130d15c5, type: 3}
