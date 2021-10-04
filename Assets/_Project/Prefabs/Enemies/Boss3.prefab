@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 213824249225192704}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: -0.25, z: 0}
+  m_LocalPosition: {x: 0.203, y: 0.621, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 325040204216892311}
@@ -43,16 +43,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
-  bulletPrefab: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+  bulletPrefab: {fileID: 8022407164684648610, guid: e92b75428b42a1b4bb57bf924a727051, type: 3}
   bulletPivots: {fileID: 325040204216892311}
-  speedBullet: 5
-  fireRate: 0.5
+  speedBullet: 11
+  fireRate: 3
   fireSequence: 1
   fireRateSequence: 0
   anim: {fileID: 9126348537239474897}
   sprRenderer: {fileID: 8290998242136813564}
   spriteIsRight: 0
   life: 5
+  Saber: {fileID: 0}
 --- !u!1001 &3825364126996430507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -82,11 +83,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693712, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 5.2470617
       objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693712, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.010463238
       objectReference: {fileID: 0}
     - target: {fileID: 5051322027006693712, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.z
@@ -132,17 +133,21 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 675151256554756322, guid: a31038a698f9cca42b15cd977fd3b173, type: 3}
+    - target: {fileID: 5051322027006693719, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cdb86c593c6d0804e80982d3db0d271b, type: 2}
     - target: {fileID: 5454177748424879226, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 3b86ad5a571d94d4e9e2d18a83a6ef51, type: 2}
     - target: {fileID: 8275328022537684280, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1
+      value: -0.273
       objectReference: {fileID: 0}
     - target: {fileID: 8275328022537684280, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.25
+      value: 0.616
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}

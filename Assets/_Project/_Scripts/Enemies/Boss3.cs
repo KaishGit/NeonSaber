@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Boss3 : Enemy
 {
+    public SaberControl Saber;
     protected override void OnUpdate()
     {
         switch (life)
@@ -46,6 +47,7 @@ public class Boss3 : Enemy
         if (tag == "Sabre")
         {
             SfxManager.Instance.PlaySaberInBoss();
+            SaberEffectManager.Instance.SetSaberByBoss(Saber);
         }
         else
         {

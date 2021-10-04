@@ -76,9 +76,17 @@ PrefabInstance:
       value: -0.02
       objectReference: {fileID: 0}
     - target: {fileID: 6307097738245288537, guid: 0bfdaceb1433fe840b86320340796159, type: 3}
+      propertyPath: fireRate
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6307097738245288537, guid: 0bfdaceb1433fe840b86320340796159, type: 3}
       propertyPath: bulletPivot
       value: 
       objectReference: {fileID: 1664172989107553468}
+    - target: {fileID: 6307097738245288537, guid: 0bfdaceb1433fe840b86320340796159, type: 3}
+      propertyPath: speedBullet
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 6307097738245288537, guid: 0bfdaceb1433fe840b86320340796159, type: 3}
       propertyPath: bulletPrefab
       value: 

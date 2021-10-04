@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class  Enemy : MonoBehaviour
+public abstract class Enemy : MonoBehaviour
 {
     [Header("Enemy Config")]
     public float speed = 2f;
@@ -23,7 +23,7 @@ public abstract class  Enemy : MonoBehaviour
     public float fireRateSequence = 0f;
     private float currentDelaySequence = 0f;
 
-        
+
     [Header("Other")]
     public Animator anim;
     public SpriteRenderer sprRenderer;
@@ -33,20 +33,23 @@ public abstract class  Enemy : MonoBehaviour
 
     protected Vector3 dirWalk;
 
-    protected bool canFire = true;
 
     private bool isDead;
+
+    protected bool canFire = true;
 
 
     private void Start()
     {
         OnStart();
+
+        currentDelayFire += Time.deltaTime + UnityEngine.Random.Range(-1.1f, 1.1f);
     }
     void Update()
     {
         if (canFire)
         {
-            currentDelayFire += Time.deltaTime;
+            currentDelayFire += Time.deltaTime + UnityEngine.Random.Range(-0.5f, 0.5f);
             if (currentDelayFire >= fireRate)
             {
                 currentDelaySequence += Time.deltaTime;
@@ -114,7 +117,7 @@ public abstract class  Enemy : MonoBehaviour
         }
     }
 
-    protected virtual void OnTakeDamage(string tag) 
+    protected virtual void OnTakeDamage(string tag)
     {
         life--;
         if (life <= 0)
@@ -130,7 +133,7 @@ public abstract class  Enemy : MonoBehaviour
         Debug.Log("Death");
     }
 
-    protected virtual void OnAnimation() 
+    protected virtual void OnAnimation()
     {
 
         Vector3 scaleChange = Vector3.one;

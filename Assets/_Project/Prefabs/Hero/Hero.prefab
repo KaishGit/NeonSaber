@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5363987590273016637}
   - component: {fileID: 5363987590273016639}
   - component: {fileID: 5363987590273016636}
-  - component: {fileID: 5363987590273016638}
   m_Layer: 0
   m_Name: Hero Sprite
   m_TagString: Untagged
@@ -52,7 +51,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: b85e9027a24d91e4081029a047ebc1d7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,19 +109,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.35795945, y: 0.50779414}
   m_EdgeRadius: 0
---- !u!114 &5363987590273016638
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5363987590273016634}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8013bee8146c7f14186a109fd9fd0566, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _Color: {r: 0, g: 5.6156864, b: 5.992157, a: 0}
 --- !u!1 &5363987591236694307
 GameObject:
   m_ObjectHideFlags: 0

@@ -30,6 +30,22 @@ public class SaberControl : MonoBehaviour
         if (collision.CompareTag("Boss"))
         {
             SaberEffectManager.Instance.SetSaberByBoss(this);
+        }      
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            SfxManager.Instance.PlaySaberInWall();
+        }
+        else if (collision.gameObject.CompareTag("Shield"))
+        {
+            SfxManager.Instance.PlaySaberInShield();
+        }
+        else if (collision.gameObject.CompareTag("Saber"))
+        {
+            SfxManager.Instance.PlaySaberInSaber();
         }
     }
 }

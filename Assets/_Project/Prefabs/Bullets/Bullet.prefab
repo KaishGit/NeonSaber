@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6086618807654377699}
   m_Layer: 0
   m_Name: _Bullet
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -147,6 +147,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb2D: {fileID: 750857476395833026}
   speed: 5
+  _SpriteRenderer: {fileID: 750857476395833025}
+  PlayerBullet: {fileID: 2100000, guid: 6ca616b650831054db8830fb95bf7eb8, type: 2}
   dir: {x: 0, y: 0, z: 0}
 --- !u!95 &6086618807654377699
 Animator:

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &741462915345418800
+--- !u!1001 &2471768545378751427
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -12,12 +12,24 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 6.545044
       objectReference: {fileID: 0}
     - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.9421916
       objectReference: {fileID: 0}
     - target: {fileID: 750857476395833024, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51,17 +63,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833025, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f9727bcd6a389db48ad70481b9ae649c, type: 2}
     - target: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
       propertyPath: m_Name
-      value: PulseBullet
+      value: BigBullet
       objectReference: {fileID: 0}
-    - target: {fileID: 1843420022794961447, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
-      propertyPath: speed
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6086618807654377699, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
-      propertyPath: m_Controller
-      value: 
-      objectReference: {fileID: 9100000, guid: 12d601d0ae339d94daff844d6e5b0416, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
