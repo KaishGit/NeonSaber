@@ -33,6 +33,7 @@ public abstract class  Enemy : MonoBehaviour
 
     protected Vector3 dirWalk;
 
+    protected bool canFire = true;
 
     private bool isDead;
 
@@ -43,58 +44,60 @@ public abstract class  Enemy : MonoBehaviour
     }
     void Update()
     {
-
-        currentDelayFire += Time.deltaTime;
-        if (currentDelayFire >= fireRate)
+        if (canFire)
         {
-            currentDelaySequence += Time.deltaTime;
-            if (currentDelaySequence > fireRateSequence)
+            currentDelayFire += Time.deltaTime;
+            if (currentDelayFire >= fireRate)
             {
-                currentDelaySequence = 0f;
-
-                currentFire++;
-                Vector3 result = ReferenceManager.instance.playerTransform.position - transform.position ;
-
-                var positionTarget1 = ReferenceManager.instance.playerTransform.position + (Vector3.up * 0.5f) + (Vector3.right * 0.5f);
-                var positionTarget2 = ReferenceManager.instance.playerTransform.position + (Vector3.down * 0.5f) + (Vector3.left * 0.5f);
-                if ((result.x > 0 && result.y > 0) || (result.x < 0 && result.y < 0))
+                currentDelaySequence += Time.deltaTime;
+                if (currentDelaySequence > fireRateSequence)
                 {
-                    positionTarget1 = positionTarget1 + Vector3.left;
-                    positionTarget2 = positionTarget2 + Vector3.right;
-                }
+                    currentDelaySequence = 0f;
 
-                if (bulletPivots.childCount == 1)
-                {
-                    foreach (Transform bulletPivot in bulletPivots)
+                    currentFire++;
+                    Vector3 result = ReferenceManager.instance.playerTransform.position - transform.position;
+
+                    var positionTarget1 = ReferenceManager.instance.playerTransform.position + (Vector3.up * 0.5f) + (Vector3.right * 0.5f);
+                    var positionTarget2 = ReferenceManager.instance.playerTransform.position + (Vector3.down * 0.5f) + (Vector3.left * 0.5f);
+                    if ((result.x > 0 && result.y > 0) || (result.x < 0 && result.y < 0))
                     {
-                        GameObject obj = Instantiate(bulletPrefab, bulletPivot.position, Quaternion.identity, transform.parent);
-                        Bullet b = obj.GetComponent<Bullet>();
-                        b.dir = (ReferenceManager.instance.playerTransform.position - transform.position).normalized;
-                        b.speed = speedBullet;
+                        positionTarget1 = positionTarget1 + Vector3.left;
+                        positionTarget2 = positionTarget2 + Vector3.right;
                     }
-                } 
-                else
-                {
-                    GameObject obj = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
-                    Bullet b = obj.GetComponent<Bullet>();
-                    b.dir = (positionTarget1 - transform.position).normalized;
-                    b.speed = speedBullet;
 
-                    GameObject obj1 = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
-                    b = obj1.GetComponent<Bullet>();
-                    b.dir = (positionTarget2 - transform.position).normalized;
-                    b.speed = speedBullet;
+                    if (bulletPivots.childCount == 1)
+                    {
+                        foreach (Transform bulletPivot in bulletPivots)
+                        {
+                            GameObject obj = Instantiate(bulletPrefab, bulletPivot.position, Quaternion.identity, transform.parent);
+                            Bullet b = obj.GetComponent<Bullet>();
+                            b.dir = (ReferenceManager.instance.playerTransform.position - transform.position).normalized;
+                            b.speed = speedBullet;
+                        }
+                    }
+                    else
+                    {
+                        GameObject obj = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
+                        Bullet b = obj.GetComponent<Bullet>();
+                        b.dir = (positionTarget1 - transform.position).normalized;
+                        b.speed = speedBullet;
 
+                        GameObject obj1 = Instantiate(bulletPrefab, transform.position, Quaternion.identity, transform.parent);
+                        b = obj1.GetComponent<Bullet>();
+                        b.dir = (positionTarget2 - transform.position).normalized;
+                        b.speed = speedBullet;
+
+                    }
+
+                    if (currentFire >= fireSequence)
+                    {
+                        currentFire = 0;
+                        currentDelayFire = 0f;
+                    }
                 }
 
-                if (currentFire >= fireSequence)
-                {
-                    currentFire = 0;
-                    currentDelayFire = 0f;
-                }
+
             }
-            
-
         }
         OnUpdate();
         OnAnimation();

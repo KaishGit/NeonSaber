@@ -2,10 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boss5 : Enemy
+public class Boss5 : Patrol
 {
+    private bool isDefending;
+    public float DefenseTime;
+    public Collider2D ShieldCollider;
+
+    private float maxDefenseTime;
+    private float nextDefense;
+
     protected override void OnUpdate()
     {
+        if (!isDefending) {
+            base.OnUpdate();
+
+            if (Time.time >= maxDefenseTime && Time.time >= nextDefense)
+            {
+                canFire = false;
+                isDefending = true;
+                maxDefenseTime = Time.time + DefenseTime;
+                ShieldCollider.enabled = true;
+
+                SfxManager.Instance.PlayShieldActive();
+            }
+        }
+        else if (Time.time >= maxDefenseTime)
+        {
+            canFire = true;
+            isDefending = false;
+            ShieldCollider.enabled = false;
+
+            nextDefense = Time.time + Random.Range(1.5f, 7f);
+        }
+
+
+        anim.SetBool("isDefending", isDefending);
+
+        
+
         switch (life)
         {
             case 6:
