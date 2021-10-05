@@ -31,10 +31,10 @@ public class LevelManager : MonoBehaviour
     {
         var newSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
 
-        if(newSceneIndex == SceneManager.sceneCountInBuildSettings)
-            SceneManager.LoadScene(0);
+        if (newSceneIndex == SceneManager.sceneCountInBuildSettings)
+            LoadLevel(0);
         else
-            SceneManager.LoadScene(newSceneIndex);
+            LoadLevel(newSceneIndex);
     }
 
     public void PrevLevel()
@@ -42,9 +42,9 @@ public class LevelManager : MonoBehaviour
         var newSceneIndex = SceneManager.GetActiveScene().buildIndex - 1;
 
         if (newSceneIndex == -1)
-            SceneManager.LoadScene(SceneManager.sceneCountInBuildSettings - 1);
+            LoadLevel(SceneManager.sceneCountInBuildSettings - 1);
         else
-            SceneManager.LoadScene(newSceneIndex);
+            LoadLevel(newSceneIndex);
     }
 
     public void LoadLevel(string name)

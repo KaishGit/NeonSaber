@@ -1776,6 +1776,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8060894340420017169, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1695879631}
     - target: {fileID: 8169767477367741965, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -2233,7 +2237,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2824654758952099743, guid: 0915eab111e7a724787a757d27230392, type: 3}
       propertyPath: LoadDelay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2824654758952099743, guid: 0915eab111e7a724787a757d27230392, type: 3}
       propertyPath: RestartDelay
@@ -2582,9 +2586,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[0].text
-      value: After facing the biggest challenge of his life, Hook Skycatcher is now
-        free spirited and his power stable and will once again be able to protect
-        the universe.
+      value: '
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697849, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: sentences.Array.data[1].text
@@ -2764,7 +2768,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697854, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}

@@ -1862,6 +1862,26 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7728166408740552208, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728166408740552208, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728166408740552208, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 8060894340420017169, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1695879631}
+    - target: {fileID: 8169767477367741965, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72dca0f734b26a6469b3d236759221e0, type: 3}
 --- !u!1001 &2810992446826673937
@@ -2315,7 +2335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2824654758952099743, guid: 0915eab111e7a724787a757d27230392, type: 3}
       propertyPath: LoadDelay
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2824654758952099743, guid: 0915eab111e7a724787a757d27230392, type: 3}
       propertyPath: RestartDelay
@@ -2760,6 +2780,14 @@ PrefabInstance:
       propertyPath: sentences.Array.data[7].eraseToNext
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697850, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1695879631}
+    - target: {fileID: 8933649749236697851, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697853, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -2794,6 +2822,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697853, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
       propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697853, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697853, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8933649749236697853, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}
+      propertyPath: m_LocalScale.z
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8933649749236697853, guid: 3f226ded87f73be4f88847ac07ec3fbc, type: 3}

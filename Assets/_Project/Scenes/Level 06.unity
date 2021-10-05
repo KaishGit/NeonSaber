@@ -2151,14 +2151,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2824654758952099743, guid: 0915eab111e7a724787a757d27230392, type: 3}
-      propertyPath: LoadDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2824654758952099743, guid: 0915eab111e7a724787a757d27230392, type: 3}
-      propertyPath: RestartDelay
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5264354526126357817, guid: 0915eab111e7a724787a757d27230392, type: 3}
       propertyPath: m_RootOrder
       value: 9

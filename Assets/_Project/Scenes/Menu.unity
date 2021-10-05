@@ -227,7 +227,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!199 &234275761
 ParticleSystemRenderer:
   serializedVersion: 6
@@ -6601,14 +6601,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelManager
       objectReference: {fileID: 0}
-    - target: {fileID: 2824654758952099743, guid: 0915eab111e7a724787a757d27230392, type: 3}
-      propertyPath: LoadDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2824654758952099743, guid: 0915eab111e7a724787a757d27230392, type: 3}
-      propertyPath: RestartDelay
-      value: 0.5
-      objectReference: {fileID: 0}
     - target: {fileID: 5264354526126357817, guid: 0915eab111e7a724787a757d27230392, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -6714,10 +6706,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6310914620312554351, guid: 4980d42bbfd5184468609d79dbff538d, type: 3}
-      propertyPath: Menu
-      value: 
-      objectReference: {fileID: 8300000, guid: 7f2b1b932b1b3d349a42b9e787adacf8, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4980d42bbfd5184468609d79dbff538d, type: 3}
 --- !u!1001 &6749284736245362133

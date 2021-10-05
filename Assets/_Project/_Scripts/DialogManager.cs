@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class DialogManager : MonoBehaviour
 {
+    PlayerControls controls;
+
     public TextMeshProUGUI dialog;
     public SentendInfo[] sentences;
 
@@ -28,6 +31,13 @@ public class DialogManager : MonoBehaviour
 
     SentendInfo currentSentence;
 
+    private void Awake()
+    {
+        controls = new PlayerControls();
+
+        controls.Gameplay.Defense.performed += Skip;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +45,23 @@ public class DialogManager : MonoBehaviour
         charArray = currentSentence.text.ToCharArray();
         dialog.text = "";
     }
+
+    private void Skip(InputAction.CallbackContext obj)
+    {
+        LevelManager.Instance.NextLevel();
+    }
+
+    private void OnEnable()
+    {
+        controls.Gameplay.Enable();
+    }
+
+
+    private void OnDisable()
+    {
+        controls.Gameplay.Disable();
+    }
+
 
     // Update is called once per frame
     void Update()
