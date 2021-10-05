@@ -8,11 +8,21 @@ public class HeroController : MonoBehaviour
 {
     PlayerControls controls;
 
+    public ParticleSystem shieldExplosionParticle;
+    public ParticleSystem shieldRewindParticle;
+
+    public Material normalMaterial;
+    public Material powerMaterial;
+
+    public float powerTime = 10f;
+    private float maxPowerTime;
+
     public float Speed;
     public Rigidbody2D MyRigidBody;
     public Animator MyAnimator;
     public float DefenseTime;
     public Collider2D ShieldCollider;
+    public SpriteRenderer sprRenderer;
 
     private bool isDead, isWalking, isDefending;
 
@@ -24,8 +34,13 @@ public class HeroController : MonoBehaviour
 
     private Vector3 inputMovement;
 
+    private bool rewindParticle = false;
+
     private void Awake()
     {
+        shieldRewindParticle.playbackSpeed = 10f;
+        //shieldExplosionParticle.playbackSpeed = 1f;
+
         controls = new PlayerControls();
 
         controls.Gameplay.Movement.performed += GetMovement;
@@ -48,6 +63,18 @@ public class HeroController : MonoBehaviour
     {
         if (isDead) return;
 
+        if (Time.time >= maxPowerTime-0.55 && maxPowerTime != 0 && !isDefending)
+        {
+            shieldExplosionParticle.Stop();
+            if (!shieldRewindParticle.isPlaying && !rewindParticle)
+            {
+                rewindParticle = true;
+                shieldRewindParticle.Play();
+            }
+
+            sprRenderer.material = powerMaterial;
+        }
+
         if (!isDefending)
         {
             direction.x = this.inputMovement.x;
@@ -69,11 +96,17 @@ public class HeroController : MonoBehaviour
     {
         if (isDefending && Time.time >= maxDefenseTime)
         {
+            sprRenderer.material = normalMaterial;
+
             isDefending = false;
             ShieldCollider.enabled = false;
             MyAnimator.Play("Hero_Idle");
 
             gameObject.tag = "Player";
+
+            maxPowerTime = Time.time + powerTime;
+
+            shieldExplosionParticle.Play();
         }
     }
 
@@ -98,7 +131,7 @@ public class HeroController : MonoBehaviour
 
     private void GetDefense(InputAction.CallbackContext obj)
     {
-        if (!isDefending)
+        if (!isDefending && Time.time > maxPowerTime)
         {
             isDefending = true;
             maxDefenseTime = Time.time + DefenseTime;
@@ -109,6 +142,9 @@ public class HeroController : MonoBehaviour
             gameObject.tag = "Shield";
 
             isWalking = false;
+
+            rewindParticle = false;
+
         }
     }
 

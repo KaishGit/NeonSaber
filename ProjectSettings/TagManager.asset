@@ -12,6 +12,7 @@ TagManager:
   - Wall
   - Shield
   - Monster
+  - HeroBody
   layers:
   - Default
   - TransparentFX

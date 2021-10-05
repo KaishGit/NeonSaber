@@ -116,7 +116,7 @@ public abstract class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
 
-        if (collision.tag == "Player")
+        if (collision.tag == "HeroBody")
         {
             ReferenceManager.instance.playerTransform.GetComponent<HeroController>().PlayerDeath();
         }
