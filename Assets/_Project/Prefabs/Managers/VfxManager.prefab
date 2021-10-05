@@ -43,9 +43,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d80420eeb2b50c4c9d43b349fb32963, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HeroDeath: {fileID: 4124274291785452830, guid: 48d898ae1167d4747a16cd7d08215fbb, type: 3}
-  MonsterDeath: {fileID: 4124274291785452830, guid: 48d898ae1167d4747a16cd7d08215fbb, type: 3}
-  BossDeath: {fileID: 4124274291785452830, guid: 48d898ae1167d4747a16cd7d08215fbb, type: 3}
-  SaberPower: {fileID: 4124274291785452830, guid: 48d898ae1167d4747a16cd7d08215fbb, type: 3}
-  DamageBoss: {fileID: 4124274291785452830, guid: 48d898ae1167d4747a16cd7d08215fbb, type: 3}
-  DarkHero: {fileID: 4124274291785452830, guid: 48d898ae1167d4747a16cd7d08215fbb, type: 3}
+  HeroDeath: {fileID: 7765505757745120918, guid: c8e7d860ddf518d4eb990c87e7caf2ab, type: 3}
+  MonsterDeath: {fileID: 7765505757745120918, guid: c8e7d860ddf518d4eb990c87e7caf2ab, type: 3}
+  BossDeath: {fileID: 7765505757745120918, guid: c8e7d860ddf518d4eb990c87e7caf2ab, type: 3}
+  SaberPower: {fileID: 6578158309321577548, guid: b0a331333e7a0f04b937d322dc2c4c8b, type: 3}
+  DamageBoss: {fileID: 7765505757745120918, guid: c8e7d860ddf518d4eb990c87e7caf2ab, type: 3}
+  DarkHero: {fileID: 7765505757745120918, guid: c8e7d860ddf518d4eb990c87e7caf2ab, type: 3}
+  Bullet: {fileID: 2432131110815800739, guid: c0f79e52d2f350d49a392f4e5d373d8c, type: 3}

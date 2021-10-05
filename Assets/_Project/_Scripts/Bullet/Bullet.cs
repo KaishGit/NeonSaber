@@ -67,4 +67,9 @@ public class Bullet : MonoBehaviour
             }          
         }
     }
+
+    private void OnDestroy()
+    {
+        VfxManager.Instance.PlayBullet(transform.position);
+    }
 }

@@ -7,7 +7,7 @@ public class VfxManager : MonoBehaviour
     static public VfxManager Instance;
 
 	public GameObject HeroDeath, MonsterDeath, BossDeath;
-	public GameObject SaberPower, DamageBoss, DarkHero;
+	public GameObject SaberPower, DamageBoss, DarkHero, Bullet;
 
 	private void Awake()
 	{
@@ -50,6 +50,11 @@ public class VfxManager : MonoBehaviour
 	public void PlayDarkHero(Vector3 position)
 	{
 		Instantiate(DarkHero, position, Quaternion.identity, gameObject.transform);
+	}
+
+	public void PlayBullet(Vector3 position)
+	{
+		Instantiate(Bullet, position, Quaternion.identity, gameObject.transform);
 	}
 }
 
