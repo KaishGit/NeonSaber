@@ -52,9 +52,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 750857476395833025, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833025, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4ef9089f61fd9134985ed30cdab2713b, type: 2}
+    - target: {fileID: 750857476395833026, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_Mass
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
       propertyPath: m_Name
       value: BulletDouble

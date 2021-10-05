@@ -115,13 +115,14 @@ MonoBehaviour:
   bulletPrefab: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
   bulletPivots: {fileID: 5072417929382303268}
   speedBullet: 5
-  fireRate: 1
+  fireRate: 15
   fireSequence: 1
   fireRateSequence: 0
   anim: {fileID: 4341842537756393314}
   sprRenderer: {fileID: 3596570247446200911}
   spriteIsRight: 1
-  life: 6
+  life: 8
+  invencibleTime: 1.5
   walkDistance: 2
   changeDistance: 0.1
   angleWalk: 0

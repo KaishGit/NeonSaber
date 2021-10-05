@@ -612,8 +612,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 241615155890132317, guid: bcf08cb2e8971d544be9914c9f216ab0, type: 3}
+      propertyPath: fireRate
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 241615155890132317, guid: bcf08cb2e8971d544be9914c9f216ab0, type: 3}
       propertyPath: delayStop
       value: 5000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 241615155890132317, guid: bcf08cb2e8971d544be9914c9f216ab0, type: 3}
+      propertyPath: speedBullet
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7564517011467368369, guid: bcf08cb2e8971d544be9914c9f216ab0, type: 3}
       propertyPath: m_Name
@@ -1217,8 +1225,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 241615155890132317, guid: bcf08cb2e8971d544be9914c9f216ab0, type: 3}
+      propertyPath: fireRate
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 241615155890132317, guid: bcf08cb2e8971d544be9914c9f216ab0, type: 3}
       propertyPath: delayStop
       value: 5000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 241615155890132317, guid: bcf08cb2e8971d544be9914c9f216ab0, type: 3}
+      propertyPath: speedBullet
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7564517011467368369, guid: bcf08cb2e8971d544be9914c9f216ab0, type: 3}
       propertyPath: m_Name

@@ -64,12 +64,20 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 750857476395833025, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_SortingOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 750857476395833025, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f9727bcd6a389db48ad70481b9ae649c, type: 2}
+    - target: {fileID: 750857476395833026, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
+      propertyPath: m_Mass
+      value: 0.001
+      objectReference: {fileID: 0}
     - target: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
       propertyPath: m_Name
-      value: BigBullet
+      value: BulletBig
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}

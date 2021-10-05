@@ -154,7 +154,7 @@ MonoBehaviour:
   SaberInBoss: {fileID: 8300000, guid: 3721ec4d4f081234c8b5d9526fe130c5, type: 3}
   SaberInWall: {fileID: 8300000, guid: b5d975607c5f0234387299191f6c6f44, type: 3}
   SaberInShield: {fileID: 8300000, guid: 9b39488eb116a584a8aa3627f3bf8679, type: 3}
-  SaberInSaber: {fileID: 8300000, guid: 0e7354c96f06036499f7b8758e6549b7, type: 3}
+  SaberInSaber: {fileID: 8300000, guid: 1c5cf72a67ae00c4282dbe031e722f25, type: 3}
   DeathHero: {fileID: 8300000, guid: 806bb97dc8ee2fe4abf6b1cef4ca17cc, type: 3}
   DeathMonster: {fileID: 8300000, guid: 5b78d049810b9c24c82a58874ed59685, type: 3}
   DeathBoss: {fileID: 8300000, guid: e9642693a276dee4d83ebe798a1de1cb, type: 3}

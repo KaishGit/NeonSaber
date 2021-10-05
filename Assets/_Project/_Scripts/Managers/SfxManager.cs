@@ -29,7 +29,7 @@ public class SfxManager : MonoBehaviour
 
     public void PlayShotAttack()
     {
-        _AudioSource.PlayOneShot(ShotAttackList[Random.Range(0,ShotAttackList.Length)]);
+        _AudioSource.PlayOneShot(ShotAttackList[Random.Range(0,ShotAttackList.Length)],0.3f);
     }
 
 	public void PlayShotInHero()
@@ -49,7 +49,7 @@ public class SfxManager : MonoBehaviour
 
 	public void PlayShotInWall()
 	{
-		_AudioSource.PlayOneShot(ShotInWall);
+		_AudioSource.PlayOneShot(ShotInWall,0.2f);
 	}
 
 	public void PlayShotInShield()
@@ -84,7 +84,7 @@ public class SfxManager : MonoBehaviour
 
 	public void PlaySaberInWall()
 	{
-		_AudioSource.PlayOneShot(SaberInWall);
+		_AudioSource.PlayOneShot(SaberInWall, 0.2f);
 	}
 
 	public void PlaySaberInShield()
