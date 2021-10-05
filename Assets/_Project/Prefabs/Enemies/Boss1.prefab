@@ -16,13 +16,14 @@ MonoBehaviour:
   bulletPrefab: {fileID: 750857476395833036, guid: cb0e138ab8623774f939530b6aa602aa, type: 3}
   bulletPivots: {fileID: 5040611585953192814}
   speedBullet: 10
-  fireRate: 3.5
+  fireRate: 3
   fireSequence: 1
   fireRateSequence: 0
   anim: {fileID: 4599954728178463272}
   sprRenderer: {fileID: 3638509553338273541}
   spriteIsRight: 0
   life: 3
+  invencibleTime: 1.5
   RotateSpeed: 5
   Speed: 1
   Radius: 0.1
@@ -119,6 +120,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 713a82e906211c14aaa53558bcf268e8, type: 2}
+    - target: {fileID: 6157587604166735079, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8275328022537684280, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.985

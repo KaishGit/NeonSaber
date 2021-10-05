@@ -78,18 +78,21 @@ public class Boss5 : Patrol
     {  
         if (tag == "Sabre")
         {
-            SfxManager.Instance.PlaySaberInBoss();
+            SfxManager.Instance.PlaySaberInHero();
         }
         else
         {
-            SfxManager.Instance.PlayShotInBoss();
+            SfxManager.Instance.PlayShotInHero();
         }
 
         base.OnTakeDamage(tag);
+
+        VfxManager.Instance.PlayDamageBoss(transform.position);
     }
 
     protected override void OnDeath()
     {
+        SfxManager.Instance.PlayDeathHero(0.2f);
         VfxManager.Instance.PlayBossDeath(transform.position);
         StartCoroutine(DeathCoroutine());
 

@@ -40,19 +40,22 @@ public abstract class Enemy : MonoBehaviour
     protected bool canFire = true;
     protected bool isInvencible;
     private float invencibleTimeLimit;
+    private float currentFireRate;
 
     private void Start()
     {
         OnStart();
 
-        currentDelayFire += Time.deltaTime + UnityEngine.Random.Range(-1.1f, 1.1f);
+        currentFireRate = fireRate + UnityEngine.Random.Range(0, 2.1f);
+        //currentDelayFire += Time.deltaTime + UnityEngine.Random.Range(-1.1f, 1.1f);
+        Debug.Log("currentFireRate In " + currentFireRate);
     }
     void Update()
     {
         if (canFire)
         {
-            currentDelayFire += Time.deltaTime + UnityEngine.Random.Range(-0.5f, 0.5f);
-            if (currentDelayFire >= fireRate)
+            currentDelayFire += Time.deltaTime;// + UnityEngine.Random.Range(-0.5f, 0.5f);
+            if (currentDelayFire >= currentFireRate)
             {
                 currentDelaySequence += Time.deltaTime;
                 if (currentDelaySequence > fireRateSequence)
@@ -98,6 +101,8 @@ public abstract class Enemy : MonoBehaviour
                     {
                         currentFire = 0;
                         currentDelayFire = 0f;
+                        currentFireRate = fireRate + UnityEngine.Random.Range(-2.1f, 2.1f);
+                        Debug.Log("currentFireRate " + currentFireRate);
                     }
                 }
 

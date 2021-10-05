@@ -1,30 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &595326063534258157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4430281803512635529}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a850fca24c7f1ac419b6218a64f014c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  bulletPrefab: {fileID: 2893255450974602511, guid: ce2cc8cd38d49a245836fdd31fb0aa3c, type: 3}
-  bulletPivots: {fileID: 5401726342471218403}
-  speedBullet: 9
-  fireRate: 3
-  fireSequence: 1
-  fireRateSequence: 0
-  anim: {fileID: 3518228915793173925}
-  sprRenderer: {fileID: 4430281803512635528}
-  spriteIsRight: 0
-  life: 4
-  invencibleTime: 1.5
-  Saber: {fileID: 0}
 --- !u!58 &1613832518199364328
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -41,6 +16,31 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.7
+--- !u!114 &595326063534258157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4430281803512635529}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a850fca24c7f1ac419b6218a64f014c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
+  bulletPrefab: {fileID: 2893255450974602511, guid: ce2cc8cd38d49a245836fdd31fb0aa3c, type: 3}
+  bulletPivots: {fileID: 5401726342471218403}
+  speedBullet: 8
+  fireRate: 5
+  fireSequence: 1
+  fireRateSequence: 0
+  anim: {fileID: 3518228915793173925}
+  sprRenderer: {fileID: 4430281803512635528}
+  spriteIsRight: 0
+  life: 4
+  invencibleTime: 1.5
+  Saber: {fileID: 0}
 --- !u!1001 &8890777797701169631
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -128,6 +128,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 53952084d1bc12843bc54cd493f112d1, type: 2}
+    - target: {fileID: 6157587604166735079, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
+      propertyPath: m_Constraints
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 8275328022537684280, guid: 92eb726ed4edc7e41bb3fd837bf07ea1, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.168
