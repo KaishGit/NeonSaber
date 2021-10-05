@@ -170,7 +170,7 @@ public class HeroController : MonoBehaviour
         }
     }
 
-    private void PlayerDeath()
+    public void PlayerDeath()
     {
         isDead = true;
         transform.localScale = Vector3.zero;
@@ -183,6 +183,7 @@ public class HeroController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("TakeDamage");
         TakeDamage(other.tag);
     }
 

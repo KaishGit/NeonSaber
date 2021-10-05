@@ -115,6 +115,12 @@ public abstract class Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
+        if (collision.tag == "Player")
+        {
+            ReferenceManager.instance.playerTransform.GetComponent<HeroController>().PlayerDeath();
+        }
+
         if (isInvencible) return;
 
         if (collision.tag == "Sabre" || collision.tag == "SabreBullet")
